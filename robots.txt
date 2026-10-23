@@ -1,0 +1,3 @@
+# Demos privadas de clientes: no indexar
+User-agent: *
+Disallow: /
