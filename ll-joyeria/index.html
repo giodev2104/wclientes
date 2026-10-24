@@ -150,6 +150,13 @@ section{scroll-margin-top:120px}
 .cab-sec .mayus{display:block;color:var(--gris);margin-bottom:16px}
 .cab-sec h2{font-size:clamp(34px,3.8vw,52px)}
 
+/* Catálogo de productos (catalogo.js): hereda la letra y los colores de la web */
+.catalogo{padding:110px 0 120px;border-top:1px solid var(--linea)}
+.catalogo [data-velority-catalogo]{--vc-acento:var(--oro);--vc-borde:var(--linea);--vc-texto-suave:var(--gris);--vc-radio:0;--vc-columnas-min:240px}
+.catalogo .vc-nom{font-family:var(--serif);font-weight:400;font-size:20px}
+.catalogo .vc-vacio{color:var(--gris)}
+@media (max-width:640px){.catalogo{padding:70px 0 80px}.catalogo .vc-nom{font-size:17px}}
+
 /* Servicios: texto + tres categorías (como el bloque «Nuestros relojes») */
 .cat{display:grid;grid-template-columns:1.05fr 1fr 1fr 1fr;gap:20px;align-items:end;padding-bottom:120px}
 .cat .txt{padding:0 30px 40px 0;align-self:center}
@@ -360,7 +367,7 @@ footer{background:#fff;border-top:1px solid var(--linea)}
     </div>
   </div>
   <nav class="menu" aria-label="Menú principal">
-    <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a>
+    <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#catalogo">Catálogo</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a>
   </nav>
 </header>
 
@@ -485,6 +492,14 @@ footer{background:#fff;border-top:1px solid var(--linea)}
         <h3>Transformación</h3><p>Damos un nuevo diseño a joyas antiguas o heredadas sin perder su esencia.</p><a class="enlace" href="#contacto">Consultar</a>
       </article>
     </div>
+  </div>
+</section>
+
+<!-- Catálogo: lo gestiona el cliente desde su panel (velority.es > Catálogo) y se carga con catalogo.js -->
+<section id="catalogo" class="catalogo" aria-label="Catálogo">
+  <div class="w">
+    <div class="cab-sec ap"><span class="mayus">Catálogo</span><h2>Piezas disponibles</h2></div>
+    <div data-velority-catalogo="2eb68ae92d0f65ed" data-whatsapp="34600000000" data-vacio="Muy pronto mostraremos aquí nuestras piezas disponibles."></div>
   </div>
 </section>
 
@@ -635,5 +650,6 @@ document.getElementById("news").addEventListener("submit", e => {
   location.href = `mailto:${CORREO}?subject=${encodeURIComponent("Alta en la newsletter")}&body=${encodeURIComponent("Deseo recibir la newsletter en: " + m)}`;
 });
 </script>
+<script src="https://velority.es/catalogo.js" defer></script>
 </body>
 </html>
