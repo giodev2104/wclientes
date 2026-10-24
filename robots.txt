@@ -1,3 +1,5 @@
-# Demos privadas de clientes: no indexar
+# Demos privadas de clientes: no deben salir en Google.
+# No se bloquea el rastreo a propósito: así Google puede leer el <meta name="robots" content="noindex"> de cada página
+# y quitarla de los resultados (con «Disallow: /» la dirección puede salir igual, sin descripción).
 User-agent: *
-Disallow: /
+Allow: /
