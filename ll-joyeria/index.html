@@ -107,9 +107,9 @@ nav.menu{display:flex;justify-content:center;gap:56px;height:50px;align-items:ce
 nav.menu a{font-size:12px;letter-spacing:.26em;text-transform:uppercase;position:relative;padding:14px 0}
 nav.menu a::after{content:"";position:absolute;left:50%;right:50%;bottom:8px;height:1px;background:var(--tinta);transition:left .35s,right .35s}
 nav.menu a:hover::after,nav.menu a.on::after{left:0;right:0}
-.hamb{display:none;width:28px;height:18px;position:relative;background:none;border:0;cursor:pointer}
-.hamb i{position:absolute;left:0;right:0;height:1px;background:var(--tinta);transition:.3s}.hamb i:nth-child(1){top:0}.hamb i:nth-child(2){top:8.5px}.hamb i:nth-child(3){top:17px}
-body.abierto .hamb i:nth-child(1){top:8.5px;transform:rotate(45deg)}body.abierto .hamb i:nth-child(2){opacity:0}body.abierto .hamb i:nth-child(3){top:8.5px;transform:rotate(-45deg)}
+.hamb{display:none;width:44px;height:44px;margin:-13px -8px;position:relative;background:none;border:0;cursor:pointer}
+.hamb i{position:absolute;left:8px;right:8px;height:1px;background:var(--tinta);transition:.3s}.hamb i:nth-child(1){top:13px}.hamb i:nth-child(2){top:21.5px}.hamb i:nth-child(3){top:30px}
+body.abierto .hamb i:nth-child(1){top:21.5px;transform:rotate(45deg)}body.abierto .hamb i:nth-child(2){opacity:0}body.abierto .hamb i:nth-child(3){top:21.5px;transform:rotate(-45deg)}
 
 /* ===== Fotos (ilustración + foto real encima si existe) ===== */
 .foto{position:relative;overflow:hidden;background:var(--marfil)}
@@ -134,10 +134,11 @@ a:hover .foto>img,a:hover .foto>svg{transform:scale(1.04)}
 .slide .txt p{font-size:17px;margin-bottom:36px;max-width:420px;opacity:0;transform:translateY(24px);transition:.9s .6s}
 .slide .txt .btn{opacity:0;transform:translateY(24px);transition:opacity .9s .75s,transform .9s .75s,background .35s,color .35s}
 .slide.on .txt>*{opacity:1;transform:none}
-.puntos{position:absolute;right:max(40px,calc((100vw - 1320px)/2 + 40px));bottom:40px;display:flex;gap:14px;z-index:3}
+.puntos{position:absolute;right:max(110px,calc((100vw - 1320px)/2 + 40px));bottom:40px;display:flex;gap:14px;z-index:3}
 .puntos button{width:42px;height:22px;background:none;border:0;cursor:pointer;position:relative}
 .puntos button::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(255,255,255,.45)}
 .puntos button.on::after{background:#fff;height:2px}
+.puntos .pausa{width:24px;height:24px;color:#fff;font-size:11px;line-height:24px}.puntos .pausa::after{display:none}.portada.osc .puntos .pausa{color:var(--tinta)}
 .portada.osc .puntos button::after{background:rgba(0,0,0,.25)}.portada.osc .puntos button.on::after{background:var(--tinta)}
 .flecha{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:54px;height:54px;border:0;background:none;cursor:pointer;opacity:.7;transition:opacity .3s}
 .flecha:hover{opacity:1}.flecha svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1}
@@ -234,7 +235,9 @@ form.cita>p{color:var(--gris);margin-bottom:30px}
 .acepto a,.info-datos a,.info-news a{text-decoration:underline}
 .info-datos{font-size:12px;line-height:1.6;color:var(--gris);margin:-16px 0 26px}
 .info-news{font-size:12px;line-height:1.6;opacity:.85;margin-top:14px;text-align:center}
-.aviso-ok{display:none;margin-top:18px;font-size:15px;color:var(--verde)}
+.aviso-ok{display:none;margin-top:18px;font-size:15px;color:var(--verde-osc)}
+a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.campo input:focus-visible,.campo select:focus-visible,.campo textarea:focus-visible{outline:2px solid var(--verde-osc);outline-offset:4px}
 
 /* Newsletter */
 .news{background:var(--verde-osc);color:#fff;text-align:center;padding:90px 0}
@@ -242,6 +245,7 @@ form.cita>p{color:var(--gris);margin-bottom:30px}
 .news p{color:#c8d6cc;margin-bottom:34px}
 .news form{display:flex;max-width:560px;margin:0 auto;border-bottom:1px solid rgba(255,255,255,.5)}
 .news input{flex:1;background:transparent;border:0;padding:14px 4px;color:#fff;outline:none;font-size:16px}
+.news input:focus-visible{outline:2px solid #fff;outline-offset:2px}
 .news input::placeholder{color:#a9bdb0}
 .news button{background:none;border:0;color:#fff;font-size:12px;letter-spacing:.24em;text-transform:uppercase;cursor:pointer;padding:0 6px}
 
@@ -261,7 +265,7 @@ footer{background:#fff;border-top:1px solid var(--linea)}
 .legal .w{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px;font-size:12px;letter-spacing:.08em;color:var(--gris)}
 .legal a{margin-left:22px}.legal a:hover{color:var(--tinta)}
 
-.wa{position:fixed;right:26px;bottom:26px;z-index:90;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 26px rgba(0,0,0,.18);transition:transform .3s}
+.wa{position:fixed;right:26px;bottom:26px;z-index:90;width:56px;height:56px;border-radius:50%;background:#128c4a;display:grid;place-items:center;box-shadow:0 8px 26px rgba(0,0,0,.18);transition:transform .3s}
 .wa:hover{transform:scale(1.07)}.wa svg{width:28px;height:28px;fill:#fff}
 
 .ap{opacity:0;transform:translateY(34px);transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.2,.6,.2,1)}.ap.vis{opacity:1;transform:none}
@@ -358,14 +362,14 @@ footer{background:#fff;border-top:1px solid var(--linea)}
 <div class="util">
   <div class="w">
     <span>Envío asegurado y grabado de cortesía</span>
-    <span><a href="#contacto">Pida cita en el taller</a> &nbsp;·&nbsp; <span class="idi"><b>ES</b> | EN</span></span>
+    <span><a href="#contacto">Pida cita en el taller</a></span>
   </div>
 </div>
 
 <header id="cab">
   <div class="w cab1">
     <div class="izq">
-      <button class="hamb" aria-label="Menú" onclick="document.body.classList.toggle('abierto')"><i></i><i></i><i></i></button>
+      <button class="hamb" aria-label="Menú" aria-expanded="false" onclick="this.setAttribute('aria-expanded', document.body.classList.toggle('abierto'))"><i></i><i></i><i></i></button>
       <a class="ic" href="#contacto" aria-label="Pedir cita"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span class="txt-l">Pedir cita</span></a>
     </div>
     <a href="#inicio" class="logo" aria-label="Joyería Los Lobatos, inicio"><img src="img/logo.webp" width="240" height="239" alt=""><span>Joyería Los Lobatos</span></a>
@@ -481,7 +485,7 @@ footer{background:#fff;border-top:1px solid var(--linea)}
   </a>
 
   <div class="hacemos w">
-    <div class="cab-sec ap"><span class="mayus">À la mesure</span><h2>Lo que hacemos por usted</h2></div>
+    <div class="cab-sec ap"><span class="mayus">Nuestros servicios</span><h2>Lo que hacemos por usted</h2></div>
     <div class="cuatro">
       <article class="ap">
         <svg viewBox="0 0 48 48"><path d="M9 39l4-11L33 8l7 7-20 20z"/><path d="M29 12l7 7M9 39l9-4"/></svg>
@@ -572,7 +576,7 @@ footer{background:#fff;border-top:1px solid var(--linea)}
         <label class="acepto"><input type="checkbox" name="acepto" required> <span>He leído y acepto la <a href="legal.html#privacidad" target="_blank" rel="noopener">política de privacidad</a>.</span></label>
         <p class="info-datos">Responsable: Joyería Los Lobatos. Finalidad: atender su solicitud de cita. Base legal: su consentimiento. No cedemos sus datos. Puede ejercer sus derechos de acceso, rectificación, supresión y demás en fernando@joyerialoslobatos.com. Consulte la <a href="legal.html#privacidad" target="_blank" rel="noopener">política de privacidad completa</a>.</p>
         <button class="btn" type="submit" style="width:100%">Enviar solicitud</button>
-        <p class="aviso-ok" id="ok">Se abrirá su correo con la solicitud preparada. Gracias por confiar en nosotros.</p>
+        <p class="aviso-ok" id="ok" role="status">Se abrirá su correo con la solicitud preparada. Gracias por confiar en nosotros.</p>
       </form>
     </div>
   </div>
@@ -594,13 +598,11 @@ footer{background:#fff;border-top:1px solid var(--linea)}
       <img src="img/logo.webp" width="240" height="239" alt="Joyería Los Lobatos">
       <p>Alta joyería artesanal creada a mano. Piezas únicas para los momentos que importan.</p>
       <div class="redes">
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM12 3.6c2.7 0 3 0 4.1.1 2.7.1 4 1.4 4.1 4.1.1 1.1.1 1.4.1 4.2s0 3-.1 4.1c-.1 2.7-1.4 4-4.1 4.1-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-2.7-.1-4-1.4-4.1-4.1C3.6 15 3.6 14.7 3.6 12s0-3 .1-4.1C3.8 5.2 5.1 3.9 7.8 3.8 8.9 3.6 9.3 3.6 12 3.6zM12 2C9.3 2 8.9 2 7.8 2.1 4.2 2.2 2.2 4.2 2.1 7.8 2 8.9 2 9.3 2 12s0 3.1.1 4.2c.1 3.6 2.1 5.6 5.7 5.7 1.1.1 1.5.1 4.2.1s3.1 0 4.2-.1c3.6-.1 5.6-2.1 5.7-5.7.1-1.1.1-1.5.1-4.2s0-3.1-.1-4.2C21.8 4.2 19.8 2.2 16.2 2.1 15.1 2 14.7 2 12 2z"/></svg></a>
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8.5V6.8c0-.8.5-1 .9-1H17V2.1L14 2c-3.3 0-4 2.4-4 4v2.5H8V12h2v10h4V12h2.7l.4-3.5z"/></svg></a>
         <a href="https://wa.me/34619733352" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
       </div>
     </div>
     <div><h3>Servicios</h3><ul><li><a href="#servicios">Anillos y alianzas</a></li><li><a href="#servicios">Colgantes y collares</a></li><li><a href="#servicios">Pendientes</a></li><li><a href="#servicios">Diseño a medida</a></li><li><a href="#servicios">Restauración</a></li></ul></div>
-    <div><h3>Atención al cliente</h3><ul><li><a href="#contacto">Solicitar cita</a></li><li><a href="#contacto">Contacto</a></li><li><a href="#">Envíos y devoluciones</a></li><li><a href="#">Cuidado de sus joyas</a></li><li><a href="#">Garantía</a></li></ul></div>
+    <div><h3>Atención al cliente</h3><ul><li><a href="#contacto">Solicitar cita</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
     <div><h3>Nuestro taller</h3><ul><li>Av. Coronel Baeza, 13 · 45004 Toledo</li><li><a href="tel:+34925280814">925 28 08 14</a></li><li><a href="mailto:fernando@joyerialoslobatos.com">fernando@joyerialoslobatos.com</a></li><li>L y X 10:00–14:00 · M, J y V 11:00–14:00</li><li>L–V 17:30–20:00 · S 10:00–14:00</li></ul></div>
   </div>
   <div class="legal"><div class="w"><span>© <span id="anio"></span> Joyería Los Lobatos. Todos los derechos reservados.</span><span><a href="legal.html#aviso-legal">Aviso legal</a><a href="legal.html#privacidad">Privacidad</a><a href="legal.html#cookies">Cookies</a></span></div></div>
@@ -615,13 +617,24 @@ const CORREO = "fernando@joyerialoslobatos.com";
 // Carrusel de portada
 const portada = document.getElementById("portada"), slides = [...portada.querySelectorAll(".slide")], puntos = document.getElementById("puntos");
 let actual = 0, temporizador;
-slides.forEach((_, i) => { const b = document.createElement("button"); b.setAttribute("aria-label", "Diapositiva " + (i + 1)); b.onclick = () => mostrar(i); puntos.appendChild(b); });
+slides.forEach((_, i) => { const b = document.createElement("button"); b.className = "pt"; b.setAttribute("aria-label", "Diapositiva " + (i + 1)); b.onclick = () => mostrar(i); puntos.appendChild(b); });
+// Pausa: botón (WCAG 2.2.2), al pasar el ratón o el foco por la portada, y siempre si se prefiere menos movimiento
+let pausadoBoton = matchMedia("(prefers-reduced-motion: reduce)").matches, encima = false;
+const pausa = document.createElement("button"); pausa.className = "pausa"; puntos.appendChild(pausa);
+function pintarPausa() { pausa.textContent = pausadoBoton ? "▶" : "❚❚"; pausa.setAttribute("aria-label", pausadoBoton ? "Reanudar el carrusel" : "Pausar el carrusel"); }
+pausa.onclick = () => { pausadoBoton = !pausadoBoton; pintarPausa(); programar(); };
+function programar() { clearInterval(temporizador); if (!pausadoBoton && !encima) temporizador = setInterval(() => mostrar(actual + 1), 6500); }
+portada.addEventListener("mouseenter", () => { encima = true; programar(); });
+portada.addEventListener("mouseleave", () => { encima = false; programar(); });
+portada.addEventListener("focusin", () => { encima = true; programar(); });
+portada.addEventListener("focusout", () => { encima = false; programar(); });
+pintarPausa();
 function mostrar(i) {
   actual = (i + slides.length) % slides.length;
   slides.forEach((s, k) => s.classList.toggle("on", k === actual));
-  [...puntos.children].forEach((b, k) => b.classList.toggle("on", k === actual));
+  [...puntos.querySelectorAll(".pt")].forEach((b, k) => b.classList.toggle("on", k === actual));
   portada.classList.toggle("osc", slides[actual].dataset.tono === "osc");
-  clearInterval(temporizador); temporizador = setInterval(() => mostrar(actual + 1), 6500);
+  programar();
 }
 function ir(d) { mostrar(actual + d); }
 mostrar(0);
