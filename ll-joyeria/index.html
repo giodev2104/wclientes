@@ -303,7 +303,6 @@ footer{background:#fff;border-top:1px solid var(--linea)}
   .slide .txt{left:20px;right:20px;bottom:76px}
   .slide .txt p{display:none}
   .slide .txt h1,.slide .txt h2{margin-bottom:26px}
-  .slide:nth-of-type(2) .foto>img{top:-36%;height:136%}
   .flecha{display:none}
   .puntos{right:auto;left:20px;bottom:28px}
   .intro{padding-top:84px;padding-bottom:80px}
@@ -325,6 +324,16 @@ footer{background:#fff;border-top:1px solid var(--linea)}
   .promesas .w{grid-template-columns:1fr 1fr}.promesas div{padding:34px 10px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.ap{opacity:1;transform:none}}
+.piezas{padding-bottom:120px}
+.pz-cab{text-align:center;margin-bottom:46px}
+.pz-cab h2{font-size:clamp(32px,3.4vw,46px);margin-top:16px}
+.pz-t{font-family:var(--serif);font-weight:400;font-size:24px;margin:38px 0 18px;padding-bottom:12px;border-bottom:1px solid var(--linea)}
+.pz-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.pz{margin:0;background:#fff;border:1px solid var(--linea);aspect-ratio:1;overflow:hidden}
+.pz img{width:100%;height:100%;object-fit:contain;transition:transform 1s cubic-bezier(.2,.6,.2,1)}
+.pz:hover img{transform:scale(1.05)}
+.pz-pie{text-align:center;margin-top:40px;color:var(--gris)}
+@media (max-width:640px){.piezas{padding-bottom:84px}.pz-g{grid-template-columns:1fr 1fr;gap:10px}.pz-t{font-size:21px;margin-top:30px}}
 </style>
 </head>
 <body>
@@ -388,36 +397,47 @@ footer{background:#fff;border-top:1px solid var(--linea)}
 <section id="inicio" aria-label="Inicio">
   <div class="portada" id="portada">
     <!-- Diapositiva 1 -->
-    <div class="slide osc on" data-tono="osc">
-      <div class="foto"><img src="img/portada-1.webp" width="1025" height="820" fetchpriority="high" alt="Collares, anillos y brazalete de oro de la colección Esencial" style="object-position:62% 40%"></div>
-      <div class="velo claro"></div>
+    <div class="slide on" data-tono="claro">
+      <div class="foto"><img src="img/portada-1.webp" width="1441" height="901" fetchpriority="high" alt="Modelo con collar y pendientes de Joyería Los Lobatos" style="object-position:60% 35%"></div>
+      <div class="velo"></div>
       <div class="txt">
-        <span class="mayus">Colección Esencial</span>
-        <h1>Oro para<br><em>cada día</em></h1>
-        <p>Collares, anillos y brazaletes de líneas finas, creados a mano para acompañarle siempre.</p>
-        <a class="btn" href="#servicios">Descubra más</a>
+        <span class="mayus">Alta joyería</span>
+        <h1>Brillo para<br><em>cada ocasión</em></h1>
+        <p>Collares y pendientes creados a mano en nuestro taller, pensados para lucirse.</p>
+        <a class="btn claro" href="#servicios">Descubra más</a>
       </div>
     </div>
     <!-- Diapositiva 2 -->
     <div class="slide" data-tono="claro">
-      <div class="foto"><img src="img/portada-2.webp" width="1125" height="750" decoding="async" alt="Anillos de oro con diamantes sobre un estuche" style="object-position:55% 50%"></div>
+      <div class="foto"><img src="img/portada-2.webp" width="1800" height="1125" decoding="async" alt="Manos con anillo de compromiso y alianza" style="object-position:50% 45%"></div>
       <div class="velo"></div>
       <div class="txt">
         <span class="mayus">Anillos y alianzas</span>
         <h2>Para el día<br><em>más importante</em></h2>
         <p>Anillos de compromiso y alianzas diseñados a su medida, con diamantes seleccionados uno a uno.</p>
-        <a class="btn claro" href="#contacto">Solicitar cita</a>
+        <a class="btn claro" href="#piezas">Ver alianzas y anillos</a>
       </div>
     </div>
     <!-- Diapositiva 3 -->
     <div class="slide" data-tono="claro">
-      <div class="foto"><img src="img/portada-3.webp" width="1020" height="570" decoding="async" alt="Pendiente de oro con perla barroca" style="object-position:70% 45%"></div>
+      <div class="foto"><img src="img/portada-3.webp" width="1800" height="1125" decoding="async" alt="Pendiente con perla y anillo" style="object-position:55% 45%"></div>
       <div class="velo"></div>
       <div class="txt">
         <span class="mayus">Perlas</span>
         <h2>La luz<br><em>de lo natural</em></h2>
-        <p>Pendientes con perlas barrocas, cada una distinta, montadas a mano en oro.</p>
+        <p>Pendientes con perla y anillos a juego, montados a mano en nuestro taller.</p>
         <a class="btn claro" href="#servicios">Descubra más</a>
+      </div>
+    </div>
+    <!-- Diapositiva 4 -->
+    <div class="slide" data-tono="claro">
+      <div class="foto"><img src="img/portada-4.webp" width="1800" height="1125" decoding="async" alt="Collar de piedras de colores sobre vestido verde" style="object-position:55% 50%"></div>
+      <div class="velo"></div>
+      <div class="txt">
+        <span class="mayus">Color</span>
+        <h2>Joyas que<br><em>no pasan desapercibidas</em></h2>
+        <p>Collares con piedras de color para las ocasiones especiales.</p>
+        <a class="btn claro" href="#contacto">Solicitar cita</a>
       </div>
     </div>
     <button class="flecha ant" aria-label="Anterior" onclick="ir(-1)"><svg viewBox="0 0 24 24"><path d="M15 4l-8 8 8 8"/></svg></button>
@@ -442,20 +462,30 @@ footer{background:#fff;border-top:1px solid var(--linea)}
       <p>Diseñamos y elaboramos cada pieza en nuestro taller, en oro de 18 quilates y plata de primera ley, con piedras seleccionadas a mano.</p>
       <a class="btn" href="#contacto">Solicitar cita</a>
     </div>
-    <a class="item ap" href="#contacto">
-      <div class="foto"><img src="img/anillos.webp" width="562" height="750" decoding="async" alt="Anillos de oro con diamantes" loading="lazy"></div>
+    <a class="item ap" href="#piezas">
+      <div class="foto"><img src="img/anillos.webp" width="900" height="1200" decoding="async" alt="Manos con anillo de compromiso y alianza" loading="lazy"></div>
       <b>Anillos y alianzas</b><small>Descubrir</small>
     </a>
     <a class="item ap" href="#contacto">
-      <div class="foto"><img src="img/colgantes.webp" width="715" height="1001" decoding="async" alt="Collar y pendientes con esmeraldas" loading="lazy"></div>
+      <div class="foto"><img src="img/colgantes.webp" width="900" height="1200" decoding="async" alt="Modelo con colgante y pendientes" loading="lazy"></div>
       <b>Colgantes y collares</b><small>Descubrir</small>
     </a>
     <a class="item ap" href="#contacto">
-      <div class="foto"><img src="img/pendientes.webp" width="570" height="760" decoding="async" alt="Pendiente de oro con perla" loading="lazy" style="object-position:60% 40%"></div>
+      <div class="foto"><img src="img/pendientes.webp" width="900" height="1200" decoding="async" alt="Pendiente largo con circonita en forma de gota" loading="lazy"></div>
       <b>Pendientes</b><small>Descubrir</small>
     </a>
   </div>
 
+
+  <!-- Piezas: alianzas y anillos de pedida (fotos del cliente) -->
+  <div class="piezas w" id="piezas">
+    <div class="pz-cab ap"><span class="mayus" style="color:var(--gris)">Algunas de nuestras piezas</span><h2>Alianzas y <em>anillos de pedida</em></h2></div>
+    <h3 class="pz-t ap">Alianzas</h3>
+    <div class="pz-g"><figure class="pz ap"><img src="img/alianza-1.webp" width="800" height="800" loading="lazy" decoding="async" alt="Alianzas de oro amarillo con línea ondulada"></figure><figure class="pz ap"><img src="img/alianza-2.webp" width="800" height="800" loading="lazy" decoding="async" alt="Alianzas de oro amarillo con hendiduras"></figure><figure class="pz ap"><img src="img/alianza-3.webp" width="800" height="800" loading="lazy" decoding="async" alt="Alianzas de oro blanco, una con diamantes"></figure><figure class="pz ap"><img src="img/alianza-4.webp" width="800" height="800" loading="lazy" decoding="async" alt="Alianzas de textura martelé en oro blanco y rosa con piedra"></figure></div>
+    <h3 class="pz-t ap">Anillos de pedida</h3>
+    <div class="pz-g"><figure class="pz ap"><img src="img/pedida-1.webp" width="800" height="800" loading="lazy" decoding="async" alt="Solitario con piedra de talla princesa"></figure><figure class="pz ap"><img src="img/pedida-2.webp" width="800" height="800" loading="lazy" decoding="async" alt="Anillo con piedra central y circonitas en el aro"></figure><figure class="pz ap"><img src="img/pedida-3.webp" width="800" height="800" loading="lazy" decoding="async" alt="Solitario con brillante en garras"></figure><figure class="pz ap"><img src="img/pedida-4.webp" width="800" height="800" loading="lazy" decoding="async" alt="Anillo con brillante central y piedras en el aro"></figure><figure class="pz ap"><img src="img/pedida-5.webp" width="800" height="800" loading="lazy" decoding="async" alt="Solitario con brillante y pavé en el aro"></figure></div>
+    <p class="pz-pie ap">¿Le gusta alguna? <a class="enlace" href="#contacto">Pida cita</a> y la vemos juntos en el taller, a su medida.</p>
+  </div>
 
   <!-- Banner: diseño a medida -->
   <a class="banner der osc" href="#contacto">
