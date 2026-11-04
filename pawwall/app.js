@@ -2,7 +2,7 @@
 (function(){
 var GAMAS={
   tr:{n:"Transparente Básico",corto:"Transparente Básico",gama:"Transparente Básico",col:"linear-gradient(135deg,#fff,#e9eef0)",pared:"transparente-pared",perros:"transparente-perros",sola:"transparente",M:39.95,L:49.95,grab:10,claro:true,d:"Casi invisible: protege sin cambiar el aspecto de tu pared."},
-  an:{n:"Smoked Gris",corto:"Smoked Gris",gama:"Smoked Glass",col:"linear-gradient(135deg,#6e6c6a,#3e3d3c)",pared:"antracita-pared",perros:"portada-movil",sola:"antracita",M:49.95,L:64.95,grab:15,d:"Ahumado gris, elegante y contemporáneo."},
+  an:{n:"Smoked Gris",corto:"Smoked Gris",gama:"Smoked Glass",col:"linear-gradient(135deg,#6e6c6a,#3e3d3c)",pared:"antracita-pared",perros:"dogwall-smoked-gris",sola:"antracita",M:49.95,L:64.95,grab:15,d:"Ahumado gris, elegante y contemporáneo."},
   br:{n:"Smoked Bronze",corto:"Smoked Bronze",gama:"Smoked Glass",col:"linear-gradient(135deg,#c08a5a,#8e5f38)",pared:"bronce-pared",perros:"bronce-perros",sola:"bronce",M:49.95,L:64.95,grab:15,d:"Ahumado cálido que combina con la madera."}
 };
 var TALLAS={M:"50 × 35 cm",L:"70 × 50 cm"};
