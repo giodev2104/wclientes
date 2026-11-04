@@ -285,3 +285,4 @@ dialog p{color:var(--mu);margin-bottom:12px}
 .banner.der:after{background:linear-gradient(180deg,rgba(27,26,24,.75),rgba(27,26,24,0) 24%),linear-gradient(90deg,var(--osc) 0%,var(--osc) 40%,rgba(27,26,24,.35) 62%,rgba(27,26,24,0) 80%)}
 @media(max-width:760px){.banner.der>img{width:100%;opacity:.5}.banner.der:after{background:linear-gradient(0deg,var(--osc) 10%,rgba(27,26,24,.7) 60%,rgba(27,26,24,.4))}}
 .banner.der h1{max-width:560px}.banner.der p{max-width:500px}
+.linea-c.der:after{background:linear-gradient(270deg,rgba(27,26,24,.92) 0%,rgba(27,26,24,.6) 40%,rgba(27,26,24,0) 68%)}.linea-c.der .in{left:auto;right:0;max-width:62%;text-align:right}.linea-c.der p{margin-left:auto}@media(max-width:560px){.linea-c.der .in{max-width:75%}}
