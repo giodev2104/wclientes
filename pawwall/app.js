@@ -2,7 +2,7 @@
 (function(){
 var GAMAS={
   tr:{n:"Transparente Básico",corto:"Transparente Básico",gama:"Transparente Básico",col:"linear-gradient(135deg,#fff,#e9eef0)",pared:"transparente-pared",perros:"transparente-perros",sola:"transparente",M:39.95,L:49.95,grab:10,claro:true,d:"Casi invisible: protege sin cambiar el aspecto de tu pared."},
-  an:{n:"Smoked Gris",corto:"Smoked Gris",gama:"Smoked Glass",col:"linear-gradient(135deg,#6e6c6a,#3e3d3c)",pared:"antracita-pared",perros:"antracita",sola:"antracita",M:49.95,L:64.95,grab:15,d:"Ahumado gris, elegante y contemporáneo."},
+  an:{n:"Smoked Gris",corto:"Smoked Gris",gama:"Smoked Glass",col:"linear-gradient(135deg,#6e6c6a,#3e3d3c)",pared:"antracita-pared",perros:"portada-movil",sola:"antracita",M:49.95,L:64.95,grab:15,d:"Ahumado gris, elegante y contemporáneo."},
   br:{n:"Smoked Bronze",corto:"Smoked Bronze",gama:"Smoked Glass",col:"linear-gradient(135deg,#c08a5a,#8e5f38)",pared:"bronce-pared",perros:"bronce-perros",sola:"bronce",M:49.95,L:64.95,grab:15,d:"Ahumado cálido que combina con la madera."}
 };
 var TALLAS={M:"50 × 35 cm",L:"70 × 50 cm"};
@@ -20,11 +20,11 @@ var cab=$("#cab"),menu=$("#menu"),hamb=$("#hamb");
 function scr(){cab.classList.toggle("sol",scrollY>40)}addEventListener("scroll",scr,{passive:true});scr();
 hamb.onclick=function(){var on=menu.classList.toggle("on");cab.classList.toggle("abierto",on);hamb.setAttribute("aria-expanded",on)};
 
-/* paneles de una línea (DogWall / CatWall), con fotos del panel sin mascotas */
+/* paneles de una línea: DogWall con perros, CatWall con gato */
 var prods=$("#prods");
 if(prods){var lin=prods.dataset.linea;
   if(ACAB[lin].length<2){prods.style.gridTemplateColumns="minmax(0,440px)";prods.style.justifyContent="center"}
-  prods.innerHTML=ACAB[lin].map(function(k){var g=GAMAS[k];return '<article class="prod"><div class="ph"><img src="img/'+g.sola+'.webp" alt="Panel '+esc(lin+" "+g.n)+'" width="1000" height="747" loading="lazy"></div><div class="in"><span class="gama">'+esc(g.gama)+'</span><h3>'+esc(lin+" "+g.corto)+'</h3><p>'+esc(g.d)+' Talla M o L.</p><div class="punt"><i style="background:'+g.col+'"></i></div><div class="pie"><div class="pr"><small>desde </small>'+eur(g.M)+'</div><a class="btn osc" href="configurador.html?linea='+lin+'&amp;acabado='+k+'">Configurar</a></div></div></article>'}).join("");
+  prods.innerHTML=ACAB[lin].map(function(k){var g=GAMAS[k];return '<article class="prod"><div class="ph"><img src="img/'+(lin=="CatWall"?"catwall-transparente":g.perros)+'.webp" alt="Panel '+esc(lin+" "+g.n)+'" width="1000" height="747" loading="lazy"></div><div class="in"><span class="gama">'+esc(g.gama)+'</span><h3>'+esc(lin+" "+g.corto)+'</h3><p>'+esc(g.d)+' Talla M o L.</p><div class="punt"><i style="background:'+g.col+'"></i></div><div class="pie"><div class="pr"><small>desde </small>'+eur(g.M)+'</div><a class="btn osc" href="configurador.html?linea='+lin+'&amp;acabado='+k+'">Configurar</a></div></div></article>'}).join("");
 }
 
 /* carrito (se guarda en este navegador) */
