@@ -286,3 +286,6 @@ dialog p{color:var(--mu);margin-bottom:12px}
 @media(max-width:760px){.banner.der>img{width:100%;opacity:.5}.banner.der:after{background:linear-gradient(0deg,var(--osc) 10%,rgba(27,26,24,.7) 60%,rgba(27,26,24,.4))}}
 .banner.der h1{max-width:560px}.banner.der p{max-width:500px}
 .linea-c.der:after{background:linear-gradient(270deg,rgba(27,26,24,.92) 0%,rgba(27,26,24,.6) 40%,rgba(27,26,24,0) 68%)}.linea-c.der .in{left:auto;right:0;max-width:62%;text-align:right}.linea-c.der p{margin-left:auto}@media(max-width:560px){.linea-c.der .in{max-width:75%}}
+
+.pf{display:grid;gap:6px;margin-bottom:12px;font-size:13.5px;color:var(--mu)}.pf input,.pf select,.pf textarea{font:inherit;font-size:15px;color:var(--tx);padding:11px 12px;border:1px solid var(--bd);border-radius:2px;background:#fff;width:100%}.pf input:focus,.pf select:focus,.pf textarea:focus{outline:none;border-color:var(--osc)}.p-err{color:#b42318;font-size:14px;min-height:1em;margin:6px 0}dialog#dlg-pedido{width:min(520px,calc(100% - 24px));max-height:calc(100vh - 24px);overflow:auto}#p-ok h2{font-size:28px;margin-bottom:12px}#p-ok p{color:var(--mu);margin-bottom:12px}
+.pf[hidden],#p-ok[hidden],form[hidden]{display:none}

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://ufwuvbjrgvphbggkfkuh.supabase.co; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CatWall by PawWall · Paneles antisalpicaduras para gatos</title>
@@ -82,7 +82,25 @@
   <div class="cp"><div class="tt"><span>Total</span><span id="t-carro">0,00 €</span></div><small style="color:var(--mu)">IVA incluido. Los gastos de envío se muestran antes de pagar.</small><button class="btn oro" id="pagar">Finalizar compra</button></div>
 </aside>
 <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
-<dialog id="dlg-demo"><div class="in"><h2>Esto es una demo</h2><p>En la web definitiva aquí se pasa al pago seguro con tarjeta y los pedidos llegan a tu panel, con el nombre a grabar en cada panel.</p><p>Todavía no se cobra nada.</p><button class="btn osc" id="dlg-ok" style="width:100%">Entendido</button></div></dialog>
+<dialog id="dlg-pedido" aria-labelledby="p-tit"><div class="in">
+<form id="f-pedido" novalidate>
+<h2 id="p-tit">Finalizar pedido</h2>
+<p class="peq" style="margin:0 0 14px">No pagas nada ahora: te contactaremos para confirmar el pedido y el pago.</p>
+<label class="pf">Nombre y apellidos<input name="nombre" autocomplete="name" maxlength="80" required></label>
+<label class="pf">Teléfono<input name="telefono" type="tel" autocomplete="tel" maxlength="25" required></label>
+<label class="pf">Correo (para recibir el resumen)<input name="email" type="email" autocomplete="email" maxlength="120"></label>
+<div class="pf"><span>Entrega</span><div class="chips" id="p-entrega"></div></div>
+<label class="pf" id="p-dir-c" hidden>Dirección de envío<input name="direccion" autocomplete="street-address" maxlength="300"></label>
+<label class="pf" id="p-pago-c">Forma de pago<select name="pago" id="p-pago"></select></label>
+<label class="pf">Nota (opcional)<textarea name="nota" rows="2" maxlength="600"></textarea></label>
+<p class="peq" id="p-nota-t"></p>
+<div class="total" style="margin:10px 0"><small>Total (IVA incluido)</small><b id="p-total" style="font:300 26px Raleway,sans-serif"></b></div>
+<p class="peq">Usaremos tus datos solo para gestionar este pedido.</p>
+<p class="p-err" id="p-err" role="alert"></p>
+<div style="display:flex;gap:10px"><button class="btn lin" type="button" id="p-cerrar">Volver</button><button class="btn osc" type="submit" id="p-enviar" style="flex:1">Enviar pedido</button></div>
+</form>
+<div id="p-ok" hidden></div>
+</div></dialog>
 <script src="app.js"></script>
 </body>
 </html>
