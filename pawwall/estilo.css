@@ -280,3 +280,7 @@ dialog p{color:var(--mu);margin-bottom:12px}
 .cont-sec{padding-top:72px}
 @media(max-width:860px){.lineas{grid-template-columns:1fr}.linea-c{min-height:360px}.linea-c h3{font-size:36px}}
 @media(max-width:760px){.banner{padding:130px 0 56px}.banner:after{background:linear-gradient(0deg,var(--osc) 10%,rgba(27,26,24,.75) 60%,rgba(27,26,24,.5))}.paneles-cta{padding:30px 24px}.linea-c .in{padding:24px}}
+
+.banner.der>img{left:auto;width:60%;opacity:.9}
+.banner.der:after{background:linear-gradient(180deg,rgba(27,26,24,.75),rgba(27,26,24,0) 24%),linear-gradient(90deg,var(--osc) 0%,var(--osc) 40%,rgba(27,26,24,.35) 62%,rgba(27,26,24,0) 80%)}
+@media(max-width:760px){.banner.der>img{width:100%;opacity:.5}.banner.der:after{background:linear-gradient(0deg,var(--osc) 10%,rgba(27,26,24,.7) 60%,rgba(27,26,24,.4))}}
