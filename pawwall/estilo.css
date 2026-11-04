@@ -148,7 +148,7 @@ h3{font-size:21px;font-weight:500}
 .nos .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .nos .ph img{aspect-ratio:4/5;object-fit:cover;width:100%}
 .nos p{color:var(--mu);margin-top:16px}
-.cita{margin-top:30px;padding:22px 26px;border-left:2px solid var(--oro);background:#fff;font:300 22px/1.4 Raleway,sans-serif;color:var(--tx)}
+.cita{margin-top:30px;padding:22px 26px;border-left:2px solid var(--oro);background:#fff;font:600 22px/1.4 Raleway,sans-serif;color:var(--tx)}
 .subm{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
 .subm div{padding:18px 20px;border:1px solid var(--bd);background:#fff}
 .subm b{font:500 18px Raleway,sans-serif;display:block;margin-bottom:4px}
