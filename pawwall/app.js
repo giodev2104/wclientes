@@ -9,6 +9,8 @@ var TALLAS={M:"50 × 35 cm",L:"70 × 50 cm"};
 var LINEAS={DogWall:"perros",CatWall:"gatos"};
 /* acabados disponibles en cada línea: CatWall solo en Transparente Básico */
 var ACAB={DogWall:["tr","an","br"],CatWall:["tr"]};
+/* fotos del configurador por línea, acabado y talla: [x, y, ancho, alto del panel en %, ancho y alto de la foto] */
+var FOTO={"dog-tr-L":[39,36.5,36,38.06,1200,896],"dog-an-L":[39,36.54,36,38.1,1200,895],"dog-br-L":[39,36.5,36,38.06,1200,896],"dog-tr-M":[44.17,47.32,25.75,27.23,1200,896],"dog-an-M":[44.17,47.37,25.75,27.26,1200,895],"dog-br-M":[44.17,47.32,25.75,27.23,1200,896],"cat-tr-L":[10.44,25.26,71.33,53.39,872,768],"cat-tr-M":[20.64,40.49,50.92,38.15,872,768]};
 var eur=function(n){return n.toLocaleString("es-ES",{minimumFractionDigits:2,maximumFractionDigits:2})+" €"};
 var $=function(s){return document.querySelector(s)};
 var esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
@@ -31,7 +33,7 @@ function guardar(){try{localStorage.setItem("pw-carro",JSON.stringify(C))}catch(
 function pintarCarro(){
   var n=C.reduce(function(a,x){return a+x.q},0),t=C.reduce(function(a,x){return a+x.p*x.q},0);
   $("#n-carro").textContent=n;$("#t-carro").textContent=eur(t);
-  $("#lista").innerHTML=C.length?C.map(function(x,i){var g=GAMAS[x.g];return '<div class="linea"><img src="img/'+g.pared+'.webp" alt=""><div><b>'+esc(x.col+" "+g.n)+'</b><small>Talla '+x.t+' · '+TALLAS[x.t]+(x.nombre?'<br>Nombre grabado: «'+esc(x.nombre)+'»':'')+'</small><div class="qt"><button data-i="'+i+'" data-d="-1" aria-label="Quitar uno">−</button>'+x.q+'<button data-i="'+i+'" data-d="1" aria-label="Añadir uno">+</button><button class="q" data-i="'+i+'" data-d="x">Eliminar</button></div></div><div class="pr">'+eur(x.p*x.q)+'</div></div>'}).join(""):'<p class="vacio">Tu carrito está vacío.<br><a href="configurador.html">Configura tu PawWall</a></p>';
+  $("#lista").innerHTML=C.length?C.map(function(x,i){var g=GAMAS[x.g];return '<div class="linea"><img src="img/conf-'+(x.col=="CatWall"?"cat":"dog")+'-'+x.g+'-'+x.t+'.webp" alt=""><div><b>'+esc(x.col+" "+g.n)+'</b><small>Talla '+x.t+' · '+TALLAS[x.t]+(x.nombre?'<br>Nombre grabado: «'+esc(x.nombre)+'»':'')+'</small><div class="qt"><button data-i="'+i+'" data-d="-1" aria-label="Quitar uno">−</button>'+x.q+'<button data-i="'+i+'" data-d="1" aria-label="Añadir uno">+</button><button class="q" data-i="'+i+'" data-d="x">Eliminar</button></div></div><div class="pr">'+eur(x.p*x.q)+'</div></div>'}).join(""):'<p class="vacio">Tu carrito está vacío.<br><a href="configurador.html">Configura tu PawWall</a></p>';
   $("#pagar").disabled=!C.length;$("#pagar").style.opacity=C.length?1:.5;
 }
 $("#lista").addEventListener("click",function(e){var b=e.target.closest("button[data-i]");if(!b)return;var i=+b.dataset.i;if(b.dataset.d=="x")C.splice(i,1);else{C[i].q+=+b.dataset.d;if(C[i].q<1)C.splice(i,1)}guardar();pintarCarro()});
@@ -52,15 +54,20 @@ if(form){
   $("#c-acab").innerHTML=Object.keys(GAMAS).map(function(k){var g=GAMAS[k];return '<label class="chip"><input type="radio" name="g" value="'+k+'"><span><i style="background:'+g.col+'"></i>'+esc(g.n)+'</span></label>'}).join("");
   $("#c-talla").innerHTML=Object.keys(TALLAS).map(function(t){return '<label class="chip"><input type="radio" name="t" value="'+t+'"><span>Talla '+t+' <small>'+TALLAS[t]+'</small></span></label>'}).join("");
   var precio=function(){var g=GAMAS[S.g];return g[S.t]+(S.nombre?g.grab:0)};
+  /* el nombre grabado se ajusta al ancho del panel de la foto */
+  var ajustarGrab=function(){var gr=$("#c-grab"),w=gr.clientWidth;if(!w)return;var fs=Math.min(w*.11,40);gr.style.fontSize=fs+"px";while(gr.scrollWidth>w*.86&&fs>8){fs-=1;gr.style.fontSize=fs+"px"}};
+  addEventListener("resize",function(){ajustarGrab()});
   var sync=function(){
     var ok=ACAB[S.col];if(ok.indexOf(S.g)<0)S.g=ok[0];
     document.querySelectorAll('#c-acab input').forEach(function(i){i.closest('label').hidden=ok.indexOf(i.value)<0});
     $("#c-solo").hidden=ok.length>1;
     form.col.value=S.col;form.g.value=S.g;form.t.value=S.t;
-    var g=GAMAS[S.g],img=$("#c-img"),src="img/"+g.pared+".webp";
-    if(img.getAttribute("src")!=src){img.style.opacity=.2;img.onload=function(){img.style.opacity=1};img.src=src}
-    img.alt="Panel "+S.col+" "+g.n+" colocado en la pared";
+    var g=GAMAS[S.g],img=$("#c-img"),k=(S.col=="CatWall"?"cat":"dog")+"-"+S.g+"-"+S.t,f=FOTO[k],src="img/conf-"+k+".webp";
+    if(img.getAttribute("src")!=src){img.style.opacity=.2;img.onload=function(){img.style.opacity=1;ajustarGrab()};img.src=src}
+    img.parentNode.style.aspectRatio=f[4]+"/"+f[5];
+    img.alt="Panel "+S.col+" "+g.n+" talla "+S.t+" ("+TALLAS[S.t]+") colocado en la pared";
     var gr=$("#c-grab");gr.textContent=S.nombre;gr.classList.toggle("claro",!!g.claro);
+    gr.style.left=f[0]+"%";gr.style.width=f[2]+"%";gr.style.top=(f[1]+f[3]*.36)+"%";ajustarGrab();
     document.querySelectorAll("#c-talla small").forEach(function(s,i){var t=Object.keys(TALLAS)[i];s.textContent=TALLAS[t]+" · "+eur(g[t])});
     $("#c-acab-n").textContent="· "+g.gama;
     $("#c-ayuda").textContent="Grabado láser: +"+g.grab+" € en "+g.gama+". Hasta 14 caracteres.";
