@@ -5,308 +5,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PawWall · Paneles antisalpicaduras de diseño para mascotas</title>
-<meta name="description" content="Paneles de metacrilato de alta densidad (3 mm) que protegen la pared de la zona de comida de tu perro o gato. Transparente o Smoked Glass, sin obras y con el nombre de tu mascota grabado.">
+<meta name="description" content="Paneles de metacrilato de alta densidad (3 mm) para la zona de comida de perros (DogWall) y gatos (CatWall). Sin obras y con el nombre de tu mascota grabado.">
 <meta name="theme-color" content="#1b1a18">
-<!-- DEMO: al publicar en pawwall.es, quitar «robots noindex» y cambiar https://velority.cloud/pawwall/ por https://pawwall.es/ (canonical, og:url, og:image y JSON-LD) -->
+<!-- DEMO: al publicar en pawwall.es, quitar «robots noindex» y cambiar https://velority.cloud/pawwall/ por https://pawwall.es/ (canonical, og:url y og:image) -->
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://velority.cloud/pawwall/">
 <link rel="icon" href="img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="img/icono.png">
 <link rel="preload" href="fuentes/raleway-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="img/portada.webp" media="(min-width:761px)">
-<link rel="preload" as="image" href="img/portada-movil.webp" media="(max-width:760px)">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="es_ES">
-<meta property="og:site_name" content="PawWall">
-<meta property="og:title" content="PawWall · Ahora, el diseño cuida de tu mascota y protege tu hogar">
-<meta property="og:description" content="Paneles antisalpicaduras de metacrilato para la zona de comida de perros y gatos. Sin obras y con el nombre de tu mascota grabado.">
-<meta property="og:url" content="https://velority.cloud/pawwall/">
-<meta property="og:image" content="https://velority.cloud/pawwall/img/og.jpg">
-<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dos perros comiendo frente a un panel PawWall Smoked Glass">
+<meta property="og:type" content="website"><meta property="og:locale" content="es_ES"><meta property="og:site_name" content="PawWall">
+<meta property="og:title" content="PawWall · Paneles antisalpicaduras de diseño para mascotas"><meta property="og:description" content="Paneles de metacrilato de alta densidad (3 mm) para la zona de comida de perros (DogWall) y gatos (CatWall). Sin obras y con el nombre de tu mascota grabado.">
+<meta property="og:url" content="https://velority.cloud/pawwall/"><meta property="og:image" content="https://velority.cloud/pawwall/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Panel antisalpicaduras PawWall",
-  "brand": {"@type": "Brand", "name": "PawWall"},
-  "description": "Panel protector de metacrilato de alta densidad (3 mm) para la zona de alimentación de perros y gatos. Fijación con adhesivos 3M, sin obras.",
-  "image": "https://velority.cloud/pawwall/img/og.jpg",
-  "material": "Metacrilato de alta densidad 3 mm",
-  "offers": {"@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "39.95", "highPrice": "64.95", "offerCount": "4"}
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Brand","name":"PawWall","slogan":"Ahora, el diseño cuida de tu mascota y protege tu hogar.","logo":"https://velority.cloud/pawwall/img/logo.png"}</script>
 <link rel="stylesheet" href="fuentes/fuentes.css">
-<style>
-:root{--osc:#1b1a18;--osc2:#26241f;--crema:#efe6d3;--hueso:#f7f4ee;--hueso2:#efeae1;--tx:#2b2a27;--mu:#6d6a63;--bd:#e2dcd0;--oro:#b8955d;--oro2:#a5824b;--ok:#4f7a5a}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-html,body{overflow-x:clip}
-body{font:400 16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--tx);background:var(--hueso)}
-img{max-width:100%;display:block}
-a{color:inherit}
-h1,h2,h3,.ral{font-family:Raleway,Inter,sans-serif;font-weight:400;letter-spacing:-.01em;line-height:1.15}
-h2{font-size:clamp(30px,4.4vw,46px);font-weight:300}
-h2 em,h1 em{font-style:normal;color:var(--oro)}
-h3{font-size:21px;font-weight:500}
-.w{max-width:1180px;margin:0 auto;padding:0 24px}
-.sec{padding:96px 0}
-.eti{display:inline-block;font:600 12px/1 Inter,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--oro2);margin-bottom:16px}
-.lead{font-size:18px;color:var(--mu);max-width:620px;margin-top:16px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 28px;border-radius:2px;font:600 14px/1 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:.2s}
-.btn.oro{background:var(--oro);color:#fff}.btn.oro:hover{background:var(--oro2)}
-.btn.lin{border-color:currentColor;background:none}
-.btn.osc{background:var(--osc);color:var(--crema)}.btn.osc:hover{background:#000}
-.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
-/* cabecera */
-.cab{position:fixed;inset:0 0 auto;z-index:30;transition:background .3s,box-shadow .3s}
-.cab .w{display:flex;align-items:center;gap:28px;height:76px}
-.cab .logo img{height:54px;width:auto}
-.cab .logo .cr{display:block}.cab .logo .os{display:none}
-.cab nav{display:flex;gap:26px;margin-left:auto}
-.cab nav a{font-size:14px;text-decoration:none;color:var(--crema);opacity:.9}
-.cab nav a:hover{opacity:1;color:#fff}
-.carro-b{position:relative;display:flex;align-items:center;gap:8px;background:none;border:1px solid rgba(239,230,211,.4);color:var(--crema);padding:10px 14px;border-radius:2px;font:500 14px Inter,sans-serif;cursor:pointer}
-.carro-b .n{min-width:20px;height:20px;border-radius:10px;background:var(--oro);color:#fff;font-size:12px;display:grid;place-items:center;padding:0 5px}
-.cab.sol{background:rgba(247,244,238,.96);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--bd)}
-.cab.sol .logo .cr{display:none}.cab.sol .logo .os{display:block}
-.cab.sol nav a{color:var(--tx)}.cab.sol .carro-b{color:var(--tx);border-color:var(--bd)}
-.hamb{display:none;background:none;border:0;color:inherit;cursor:pointer;padding:8px}
-/* portada */
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;background:var(--osc);color:var(--crema);overflow:hidden}
-.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--osc) 0%,rgba(27,26,24,.96) 30%,rgba(27,26,24,.55) 52%,rgba(27,26,24,0) 72%),linear-gradient(0deg,rgba(27,26,24,.85),transparent 26%)}
-.hero .w{position:relative;z-index:2;width:100%;padding-top:110px;padding-bottom:80px}
-.hero .txt{max-width:600px}
-.hero h1{font-size:clamp(40px,5.6vw,68px);font-weight:300;line-height:1.08}
-.hero .sub{margin:24px 0 36px;font-size:18px;color:rgba(239,230,211,.82);max-width:470px;padding-top:22px;border-top:1px solid rgba(184,149,93,.6);border-image:linear-gradient(90deg,var(--oro) 0 90px,transparent 90px) 1}
-.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero .btn.lin{color:var(--crema)}
-.hero .marco{position:absolute;inset:22px;border:1px solid rgba(184,149,93,.35);z-index:1;pointer-events:none}
-/* franja navidad */
-.navi{background:var(--osc2);color:var(--crema);text-align:center;padding:14px 20px;font-size:14.5px;letter-spacing:.02em}
-.navi b{color:#d9b97f;font-weight:600}
-/* beneficios */
-.ben{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-top:56px}
-.ben div{background:var(--hueso);padding:34px 28px}
-.ben svg{width:34px;height:34px;color:var(--oro);margin-bottom:20px}
-.ben h3{font-size:19px;margin-bottom:10px}
-.ben p{color:var(--mu);font-size:15px}
-/* colección */
-.col{background:#fff}
-.col-cab{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
-.tabs{display:inline-flex;border:1px solid var(--bd);border-radius:2px;padding:4px;background:var(--hueso)}
-.tabs button{border:0;background:none;padding:10px 20px;font:600 13px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);cursor:pointer;border-radius:2px}
-.tabs button[aria-selected=true]{background:var(--osc);color:var(--crema)}
-.prods{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
-.prod{display:flex;flex-direction:column;background:var(--hueso);border:1px solid var(--bd)}
-.prod .ph{aspect-ratio:4/3;overflow:hidden;background:var(--hueso2)}
-.prod .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.prod:hover .ph img{transform:scale(1.04)}
-.prod .in{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
-.prod .gama{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--oro2);font-weight:600}
-.prod h3{margin:8px 0 8px}
-.prod p{color:var(--mu);font-size:15px;flex:1}
-.prod .pie{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px}
-.prod .pr{font:300 26px Raleway,sans-serif}.prod .pr small{font:400 13px Inter,sans-serif;color:var(--mu)}
-.prod .btn{padding:12px 18px}
-.punt{display:flex;gap:8px;margin-top:14px}
-.punt i{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.15)}
-/* configurador */
-.conf{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:start;margin-top:48px}
-.vis{position:sticky;top:100px}
-.vis .ph{position:relative;aspect-ratio:897/768;overflow:hidden;background:var(--hueso2)}
-.vis .ph img{width:100%;height:100%;object-fit:cover;transition:opacity .35s}
-.grab{position:absolute;left:13.4%;width:69%;top:40%;text-align:center;font:400 clamp(18px,3vw,34px)/1 Raleway,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.78);text-shadow:0 1px 0 rgba(0,0,0,.12),0 0 1px rgba(255,255,255,.4);pointer-events:none;white-space:nowrap;overflow:hidden}
-.grab.claro{color:rgba(120,120,120,.55);text-shadow:0 1px 0 rgba(255,255,255,.7)}
-.vis .nota{font-size:13px;color:var(--mu);margin-top:10px}
-.op{border-top:1px solid var(--bd);padding:22px 0}
-.op:first-of-type{border-top:0;padding-top:0}
-.op>b{display:block;font:600 12.5px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
-.op>b span{font-weight:400;letter-spacing:.02em;text-transform:none;color:var(--mu);margin-left:6px}
-.chips{display:flex;flex-wrap:wrap;gap:10px}
-.chip{position:relative}
-.chip input{position:absolute;opacity:0;pointer-events:none}
-.chip span{display:flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--bd);background:#fff;border-radius:2px;font-size:14.5px;cursor:pointer;transition:.15s}
-.chip span small{color:var(--mu);font-size:12.5px}
-.chip input:checked+span{border-color:var(--osc);box-shadow:0 0 0 1px var(--osc) inset}
-.chip input:focus-visible+span{outline:2px solid var(--oro);outline-offset:2px}
-.chip i{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.18)}
-.campo{display:flex;gap:10px;align-items:center}
-.campo input{flex:1;min-width:0;padding:13px 14px;border:1px solid var(--bd);border-radius:2px;font:inherit;background:#fff}
-.campo input:focus{outline:none;border-color:var(--osc)}
-.ayuda{font-size:13px;color:var(--mu);margin-top:8px}
-.cant{display:inline-flex;border:1px solid var(--bd);background:#fff}
-.cant button{width:42px;border:0;background:none;font-size:18px;cursor:pointer}
-.cant output{min-width:40px;display:grid;place-items:center;font-weight:600}
-.total{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:8px 0 18px}
-.total .pr{font:300 40px Raleway,sans-serif}
-.total small{color:var(--mu);font-size:13px}
-.desg{font-size:13.5px;color:var(--mu)}
-.conf .btn.osc{width:100%;padding:18px}
-.sellos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
-.sellos div{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--mu);line-height:1.35}
-.sellos svg{flex:none;width:20px;height:20px;color:var(--oro2)}
-/* personalización */
-.pers{background:var(--osc);color:var(--crema)}
-.pers .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.pers .ph{position:relative;aspect-ratio:4/3;overflow:hidden}
-.pers .ph img{width:100%;height:100%;object-fit:cover}
-.pers .ph .grab{top:41%;left:37%;width:33%;font-size:clamp(11px,1.3vw,16px);letter-spacing:.24em;color:rgba(255,235,210,.75)}
-.pers .lead{color:rgba(239,230,211,.75)}
-.pers ul{list-style:none;margin:28px 0 34px;display:grid;gap:14px}
-.pers li{display:flex;gap:14px;align-items:flex-start}
-.pers li b{color:#d9b97f;font-weight:500}
-.pers li svg{flex:none;width:22px;height:22px;color:var(--oro);margin-top:2px}
-.supl{display:flex;gap:28px;padding:20px 0;border-top:1px solid rgba(239,230,211,.15);border-bottom:1px solid rgba(239,230,211,.15);margin-bottom:30px}
-.supl div{font-size:14px;color:rgba(239,230,211,.7)}
-.supl b{display:block;font:300 28px Raleway,sans-serif;color:var(--crema)}
-/* instalación */
-.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;counter-reset:p}
-.paso{position:relative;padding:34px 28px 30px;background:#fff;border:1px solid var(--bd)}
-.paso:before{counter-increment:p;content:"0" counter(p);position:absolute;top:22px;right:24px;font:300 40px Raleway,sans-serif;color:var(--bd)}
-.paso svg{width:44px;height:44px;color:var(--oro);margin-bottom:22px}
-.paso h3{margin-bottom:10px}
-.paso p{color:var(--mu);font-size:15px}
-.medidas{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
-.med{display:flex;gap:24px;align-items:center;padding:26px 28px;background:var(--hueso2)}
-.med .rect{flex:none;border:1.5px solid var(--osc);border-radius:3px;background:rgba(255,255,255,.6)}
-.med b{font:400 22px Raleway,sans-serif;display:block}
-.med span{color:var(--mu);font-size:14.5px}
-/* precios */
-.tabla{width:100%;border-collapse:collapse;margin-top:44px;background:#fff;border:1px solid var(--bd)}
-.tabla th,.tabla td{padding:18px 22px;text-align:left;border-bottom:1px solid var(--bd)}
-.tabla th{font:600 12.5px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);background:var(--hueso)}
-.tabla td{font-size:15.5px}
-.tabla td.p{font:400 20px Raleway,sans-serif;white-space:nowrap}
-.tabla tr:last-child td{border-bottom:0}
-.tabla .g{display:flex;align-items:center;gap:12px}
-.tabla .g i{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.15);flex:none}
-.peq{font-size:13.5px;color:var(--mu);margin-top:14px}
-/* nosotros */
-.nos .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.nos .ph img{aspect-ratio:4/5;object-fit:cover;width:100%}
-.nos p{color:var(--mu);margin-top:16px}
-.cita{margin-top:30px;padding:22px 26px;border-left:2px solid var(--oro);background:#fff;font:300 22px/1.4 Raleway,sans-serif;color:var(--tx)}
-.subm{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
-.subm div{padding:18px 20px;border:1px solid var(--bd);background:#fff}
-.subm b{font:500 18px Raleway,sans-serif;display:block;margin-bottom:4px}
-.subm span{font-size:14px;color:var(--mu)}
-/* b2b */
-.b2b{background:var(--hueso2)}
-.b2b .caja{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center;padding:52px;background:#fff;border:1px solid var(--bd)}
-.b2b ul{list-style:none;display:grid;gap:12px}
-.b2b li{display:flex;gap:12px;font-size:15px;color:var(--mu)}
-.b2b li b{color:var(--tx);font-weight:600}
-.b2b li svg{flex:none;width:20px;height:20px;color:var(--oro2);margin-top:2px}
-/* faq */
-.faq{max-width:820px;margin:44px auto 0}
-.faq details{border-bottom:1px solid var(--bd)}
-.faq summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;position:relative;font:500 18px Raleway,sans-serif}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary:after{content:"+";position:absolute;right:6px;top:16px;font:300 28px Raleway,sans-serif;color:var(--oro)}
-.faq details[open] summary:after{content:"–"}
-.faq details p{padding:0 0 22px;color:var(--mu)}
-/* pie */
-.pie-web{background:var(--osc);color:rgba(239,230,211,.7);padding:64px 0 34px;font-size:14.5px}
-.pie-web .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
-.pie-web img{height:56px;width:auto;margin-bottom:18px}
-.pie-web b{display:block;color:var(--crema);font-weight:600;margin-bottom:14px;letter-spacing:.12em;text-transform:uppercase;font-size:12.5px}
-.pie-web a{text-decoration:none;display:block;margin:6px 0}
-.pie-web a:hover{color:var(--crema)}
-.pie-web .fin{margin-top:48px;padding-top:24px;border-top:1px solid rgba(239,230,211,.12);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
-/* carrito */
-.velo{position:fixed;inset:0;background:rgba(20,19,17,.5);opacity:0;pointer-events:none;transition:.25s;z-index:40}
-.velo.on{opacity:1;pointer-events:auto}
-.carro{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--hueso);z-index:41;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column}
-.carro.on{transform:none}
-.carro .cc{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid var(--bd)}
-.carro .cc h2{font-size:24px}
-.x{background:none;border:0;font-size:28px;line-height:1;cursor:pointer;color:var(--tx);padding:4px 8px}
-.lista{flex:1;overflow:auto;padding:8px 24px}
-.linea{display:grid;grid-template-columns:72px 1fr auto;gap:14px;padding:18px 0;border-bottom:1px solid var(--bd)}
-.linea img{width:72px;height:62px;object-fit:cover}
-.linea b{font:500 16px Raleway,sans-serif;display:block}
-.linea small{display:block;color:var(--mu);font-size:13px;line-height:1.45}
-.linea .pr{font-weight:600;font-size:15px;text-align:right}
-.linea .qt{display:flex;gap:10px;align-items:center;margin-top:8px;font-size:13px}
-.linea .qt button{width:26px;height:26px;border:1px solid var(--bd);background:#fff;cursor:pointer}
-.linea .qt .q{background:none;border:0;text-decoration:underline;color:var(--mu);width:auto;cursor:pointer}
-.vacio{padding:50px 0;text-align:center;color:var(--mu)}
-.carro .cp{padding:22px 24px;border-top:1px solid var(--bd);background:#fff}
-.carro .tt{display:flex;justify-content:space-between;font:400 22px Raleway,sans-serif;margin-bottom:6px}
-.carro .cp .btn{width:100%;margin-top:14px;padding:17px}
-.aviso{position:fixed;left:50%;bottom:24px;transform:translate(-50%,200%);visibility:hidden;background:var(--osc);color:var(--crema);padding:14px 22px;font-size:14.5px;z-index:50;transition:transform .3s;box-shadow:0 10px 30px rgba(0,0,0,.25);max-width:calc(100% - 32px)}
-.aviso.on{transform:translate(-50%,0);visibility:visible}
-dialog{border:0;padding:0;max-width:min(480px,calc(100% - 32px));margin:auto;background:var(--hueso);box-shadow:0 30px 80px rgba(0,0,0,.35)}
-dialog::backdrop{background:rgba(20,19,17,.55)}
-dialog .in{padding:34px 32px 30px}
-dialog h2{font-size:28px;margin-bottom:12px}
-dialog p{color:var(--mu);margin-bottom:12px}
-.rev{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
-.rev.vis-on{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none}*{transition:none!important;scroll-behavior:auto!important}}
-@media(max-width:980px){
- .ben{grid-template-columns:1fr 1fr}
- .prods{grid-template-columns:1fr 1fr}
- .conf,.pers .grid,.nos .grid,.b2b .caja{grid-template-columns:1fr;gap:36px}
- .vis{position:static}
- .pie-web .grid{grid-template-columns:1fr 1fr}
- .b2b .caja{padding:36px 28px}
-}
-@media(max-width:860px){
- .cab nav{position:fixed;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--hueso);padding:8px 24px 20px;box-shadow:0 12px 24px rgba(0,0,0,.12);display:none}
- .cab nav.on{display:flex}
- .cab nav a{color:var(--tx);padding:14px 0;border-bottom:1px solid var(--bd);font-size:16px}
- .hamb{display:block;margin-left:auto;color:var(--crema)}
- .cab.sol .hamb,.cab.abierto .hamb{color:var(--tx)}
- .cab.abierto{background:var(--hueso)}
- .cab.abierto .logo .cr{display:none}.cab.abierto .logo .os{display:block}
- .cab.abierto .carro-b{color:var(--tx);border-color:var(--bd)}
- .carro-b .t{display:none}
-}
-@media(max-width:760px){
- .sec{padding:68px 0}
- .w{padding:0 18px}
- .hero{align-items:flex-end}
- .hero picture{bottom:auto;height:62%}
- .hero picture img{object-position:40% 100%}
- .hero:after{background:linear-gradient(0deg,var(--osc) 0%,var(--osc) 38%,rgba(27,26,24,.2) 62%,rgba(27,26,24,.35) 100%)}
- .hero .w{padding-bottom:56px}
- .hero .marco{inset:12px}
- .hero .cta .btn{flex:1}
- .prods,.pasos,.medidas,.subm{grid-template-columns:1fr}
- .tabla th,.tabla td{padding:14px 12px}
- .tabla td{font-size:14px}.tabla td.p{font-size:17px}
- .sellos{grid-template-columns:1fr}
- .supl{gap:18px}
- .pie-web .grid{grid-template-columns:1fr}
- .med{padding:20px}
-}
-@media(max-width:520px){.ben{grid-template-columns:1fr}.tabla .g i{display:none}}
-</style>
+<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-
 <header class="cab" id="cab">
   <div class="w">
-    <a class="logo" href="#inicio" aria-label="PawWall, inicio">
-      <img class="cr" src="img/logo-crema.webp" alt="PawWall" width="420" height="330">
-      <img class="os" src="img/logo.webp" alt="" width="420" height="330">
+    <a class="logo" href="index.html" aria-label="PawWall, inicio">
+      <img class="cr" src="img/logo-crema.webp" alt="PawWall" width="420" height="331">
+      <img class="os" src="img/logo.webp" alt="" width="420" height="331">
     </a>
-    <nav id="menu" aria-label="Menú principal">
-      <a href="#coleccion">Paneles</a>
-      <a href="#personaliza">Personalización</a>
-      <a href="#instalacion">Cómo funciona</a>
-      <a href="#nosotros">Sobre nosotros</a>
-      <a href="#preguntas">Preguntas</a>
-    </nav>
+    <nav id="menu" aria-label="Menú principal"><a href="index.html" aria-current="page">Inicio</a><a href="dogwall.html">DogWall</a><a href="catwall.html">CatWall</a><a href="personalizacion.html">Personalización</a><a href="como-funciona.html">Cómo funciona</a><a href="nosotros.html">Sobre nosotros</a><a href="configurador.html" class="lin-n">Configura</a></nav>
     <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
     <button class="carro-b" id="abrir-carro" aria-label="Abrir carrito"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="t">Carrito</span><span class="n" id="n-carro">0</span></button>
   </div>
 </header>
-
 <main id="inicio">
 <section class="hero">
   <picture>
@@ -322,15 +48,13 @@ dialog p{color:var(--mu);margin-bottom:12px}
       <h1>Ahora, el diseño cuida de tu mascota y <em>protege tu hogar</em>.</h1>
       <p class="sub">Paneles protectores de metacrilato de alta densidad (3 mm) de alta decoración para evitar salpicaduras.</p>
       <div class="cta">
-        <a class="btn oro" href="#coleccion">Descubre la colección</a>
-        <a class="btn lin" href="#configura">Configura tu PawWall</a>
+        <a class="btn oro" href="#lineas">Descubre la colección</a>
+        <a class="btn lin" href="configurador.html">Configura tu PawWall</a>
       </div>
     </div>
   </div>
 </section>
-
 <div class="navi">🎁 <b>El regalo perfecto</b> para quien cuida a su mascota y su casa · Envíos rápidos en campaña de Navidad</div>
-
 <section class="sec">
   <div class="w">
     <span class="eti">Por qué PawWall</span>
@@ -343,173 +67,46 @@ dialog p{color:var(--mu);margin-bottom:12px}
     </div>
   </div>
 </section>
-
-<section class="sec col" id="coleccion">
+<section class="sec col" id="lineas">
   <div class="w">
-    <div class="col-cab">
-      <div>
-        <span class="eti">La colección</span>
-        <h2>Elige tu <em id="col-nom">DogWall</em></h2>
-        <p class="lead" id="col-txt">Para la zona de comida de tu perro: protege zócalo y pared de las salpicaduras más intensas.</p>
-      </div>
-      <div class="tabs" role="tablist" aria-label="Colección">
-        <button role="tab" aria-selected="true" data-col="DogWall">🐶 DogWall</button>
-        <button role="tab" aria-selected="false" data-col="CatWall">🐱 CatWall</button>
-      </div>
+    <span class="eti">Una marca, dos líneas</span>
+    <h2><em>PawWall</em> para cada compañero</h2>
+    <p class="lead">PawWall es la marca. Dentro de ella diseñamos dos líneas pensadas para las necesidades de cada mascota.</p>
+    <div class="lineas">
+      <a class="linea-c rev" href="dogwall.html"><img src="img/bronce-perros.webp" alt="Dos perros de agua comen frente a un panel PawWall" width="1000" height="747" loading="lazy"><div class="in"><small>PawWall para perros</small><h3>DogWall</h3><p>Para la zona de comida de los perros: protege zócalos y paredes de salpicaduras intensas.</p><span class="ir">Ver DogWall →</span></div></a>
+      <a class="linea-c rev" href="catwall.html"><img src="img/transparente.webp" alt="Panel PawWall transparente junto a un comedero" width="1000" height="747" loading="lazy"><div class="in"><small>PawWall para gatos</small><h3>CatWall</h3><p>Para las zonas de agua y comedero de los gatos, con la misma delicadeza estética.</p><span class="ir">Ver CatWall →</span></div></a>
     </div>
-    <div class="prods" id="prods"></div>
+    <div class="paneles-cta rev"><div><h3>Configura tu PawWall</h3><p>Elige línea, acabado, medida y, si quieres, el nombre de tu mascota. Desde 39,95 €.</p></div><a class="btn oro" href="configurador.html">Empezar</a></div>
   </div>
 </section>
-
-<section class="sec" id="configura">
-  <div class="w">
-    <span class="eti">Configurador</span>
-    <h2>Configura tu <em>PawWall</em></h2>
-    <div class="conf">
-      <div class="vis">
-        <div class="ph"><img id="c-img" src="img/antracita-pared.webp" alt="Vista del panel elegido" width="897" height="768"><div class="grab" id="c-grab" aria-hidden="true"></div></div>
-        <p class="nota" id="c-nota">Imagen orientativa. El grabado se hace con láser, sutil y permanente.</p>
-      </div>
-      <form id="c-form" onsubmit="return false">
-        <div class="op"><b>Colección</b><div class="chips">
-          <label class="chip"><input type="radio" name="col" value="DogWall" checked><span>🐶 DogWall <small>perros</small></span></label>
-          <label class="chip"><input type="radio" name="col" value="CatWall"><span>🐱 CatWall <small>gatos</small></span></label>
-        </div></div>
-        <div class="op"><b>Acabado <span id="c-acab-n"></span></b><div class="chips" id="c-acab"></div></div>
-        <div class="op"><b>Medida</b><div class="chips" id="c-talla"></div></div>
-        <div class="op"><b>Nombre de tu mascota <span>(opcional)</span></b>
-          <div class="campo"><input id="c-nombre" maxlength="14" autocomplete="off" placeholder="Añade el nombre de tu mascota" aria-describedby="c-ayuda"></div>
-          <p class="ayuda" id="c-ayuda">Grabado láser. Hasta 14 caracteres.</p>
-        </div>
-        <div class="op"><b>Cantidad</b><div class="cant"><button type="button" id="c-menos" aria-label="Quitar uno">−</button><output id="c-cant">1</output><button type="button" id="c-mas" aria-label="Añadir uno">+</button></div></div>
-        <div class="op">
-          <div class="total"><div><small>Total (IVA incluido)</small><div class="pr" id="c-total">39,95 €</div></div><div class="desg" id="c-desg"></div></div>
-          <button class="btn osc" id="c-add" type="button">Añadir al carrito</button>
-          <div class="sellos">
-            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg>Envíos rápidos en campaña de Navidad</div>
-            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 4 6v6c0 4.4 3.4 8.2 8 9 4.6-.8 8-4.6 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>Fabricación nacional</div>
-            <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Pago seguro</div>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<section class="sec pers" id="personaliza">
+<section class="sec pers">
   <div class="w grid">
-    <div class="ph rev"><img src="img/bronce-perros.webp" alt="Dos perros de agua comen frente a un panel PawWall Smoked Glass bronce" width="1000" height="747" loading="lazy"><div class="grab" aria-hidden="true">Coco &amp; Lola</div></div>
+    <div class="ph rev"><img src="img/bronce-perros.webp" alt="Panel PawWall Smoked Glass bronce con dos perros" width="1000" height="747" loading="lazy"><div class="grab" aria-hidden="true">Coco &amp; Lola</div></div>
     <div>
       <span class="eti" style="color:#d9b97f">Personalización con nombre</span>
       <h2>Su rincón, <em>con su nombre</em>.</h2>
-      <p class="lead">Escribe el nombre de tu mascota al configurar tu panel y lo grabamos con láser: un detalle sutil, permanente y que no se borra al limpiar.</p>
-      <ul>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4 10-10"/></svg><span><b>Lo escribes en la ficha.</b> Una casilla opcional: «Añade el nombre de tu mascota».</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4 10-10"/></svg><span><b>Lo grabamos con láser.</b> Integrado en el panel, en el mismo estilo elegante de la marca.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4 10-10"/></svg><span><b>Un regalo que se recuerda.</b> Original y útil para quien quiere a su mascota y cuida su casa.</span></li>
-      </ul>
-      <div class="supl"><div><b>+10 €</b>Transparente Básico</div><div><b>+15 €</b>Smoked Glass</div></div>
-      <a class="btn oro" href="#configura">Grábale su nombre</a>
+      <p class="lead">Grabamos con láser el nombre de tu mascota en el panel. El regalo perfecto para quien cuida su casa y a su mascota.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:30px"><a class="btn oro" href="configurador.html">Grábale su nombre</a><a class="btn lin" style="color:var(--crema)" href="personalizacion.html">Cómo funciona el grabado</a></div>
     </div>
   </div>
 </section>
-
-<section class="sec" id="instalacion">
+<section class="sec">
   <div class="w">
-    <span class="eti">Cómo funciona</span>
-    <h2>Se coloca en <em>un minuto</em>.<br>Sin obras.</h2>
-    <div class="pasos">
-      <div class="paso rev"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 34h28"/><rect x="10" y="10" width="24" height="20" rx="2"/><path d="M14 16c3-2 6 2 9 0s6 2 8 0" opacity=".6"/></svg><h3>Limpia la pared</h3><p>Pasa un paño por la zona del comedero para que la superficie quede limpia y seca.</p></div>
-      <div class="paso rev"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="8" y="8" width="28" height="22" rx="2"/><ellipse cx="14" cy="14" rx="2.5" ry="2.2"/><ellipse cx="30" cy="14" rx="2.5" ry="2.2"/><ellipse cx="14" cy="24" rx="2.5" ry="2.2"/><ellipse cx="30" cy="24" rx="2.5" ry="2.2"/></svg><h3>Pega las huellas 3M</h3><p>Coloca los adhesivos 3M en forma de huella en la parte trasera del panel.</p></div>
-      <div class="paso rev"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 36h32"/><path d="M8 32h28" stroke-width="2.4"/><rect x="11" y="10" width="22" height="20" rx="2"/><path d="M22 4v4M18 6l4 4 4-4"/></svg><h3>Apóyalo a ras de zócalo</h3><p>Colócalo a ras de suelo, sobre el zócalo, y presiona unos segundos. Listo.</p></div>
-    </div>
-    <div class="medidas">
-      <div class="med rev"><div class="rect" style="width:72px;height:50px" aria-hidden="true"></div><div><b>Talla M · 50 × 35 cm</b><span>Para un comedero sencillo o mascotas pequeñas y medianas.</span></div></div>
-      <div class="med rev"><div class="rect" style="width:100px;height:72px" aria-hidden="true"></div><div><b>Talla L · 70 × 50 cm</b><span>Para comederos dobles, varias mascotas o perros grandes.</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec col" id="precios">
-  <div class="w">
-    <span class="eti">Precios</span>
-    <h2>Un precio <em>claro</em>.</h2>
-    <table class="tabla">
-      <thead><tr><th>Gama</th><th>Talla M · 50×35 cm</th><th>Talla L · 70×50 cm</th><th>Nombre grabado</th></tr></thead>
-      <tbody>
-        <tr><td><div class="g"><i style="background:linear-gradient(135deg,#fff,#e9eef0)"></i>Transparente Básico</div></td><td class="p">39,95 €</td><td class="p">49,95 €</td><td>+10 €</td></tr>
-        <tr><td><div class="g"><i style="background:linear-gradient(135deg,#6e6c6a,#3e3d3c)"></i><i style="background:linear-gradient(135deg,#c08a5a,#8e5f38)"></i>Smoked Glass (ahumado)</div></td><td class="p">49,95 €</td><td class="p">64,95 €</td><td>+15 €</td></tr>
-      </tbody>
-    </table>
-    <p class="peq">Precios con IVA incluido. Todos los paneles son de metacrilato de alta densidad de 3 mm, en formato apaisado, con la marca grabada de forma sutil.</p>
-  </div>
-</section>
-
-<section class="sec nos" id="nosotros">
-  <div class="w grid">
-    <div>
-      <span class="eti">Sobre nosotros</span>
-      <h2>Diseño que cuida de ti<br>y de <em>tu mejor amigo</em>.</h2>
-      <p>En PawWall partimos de una premisa muy sencilla: amamos a nuestras mascotas con locura, pero a veces, el día a día con ellas deja huella… literalmente en las paredes de casa.</p>
-      <p>Tu hogar es un espacio cuidado y pensado con mimo. ¿Por qué elegir entre el bienestar de tu peludo y la estética de tu salón? Así nació PawWall: interiorismo de alta gama con la funcionalidad más práctica para el cuidado diario de perros y gatos.</p>
-      <p>No queríamos un protector industrial que desentonara. Por eso diseñamos y fabricamos cada pieza en metacrilato de alta densidad de 3 mm: un material noble, brillante y muy resistente que se integra en tu hogar de forma casi imperceptible.</p>
-      <div class="subm">
-        <div><b>🐶 DogWall</b><span>Para la zona de comida de los perros: protege zócalos y paredes de salpicaduras intensas.</span></div>
-        <div><b>🐱 CatWall</b><span>Para el agua y el comedero de los gatos, con la misma delicadeza estética.</span></div>
-      </div>
-      <div class="cita">«Ahora, el diseño cuida de tu mascota y protege tu hogar.»</div>
-    </div>
-    <div class="ph rev"><img src="img/transparente-perros.webp" alt="Dos dálmatas junto a un panel PawWall transparente" width="1000" height="747" loading="lazy" style="aspect-ratio:4/5"></div>
-  </div>
-</section>
-
-<section class="sec b2b" id="distribuidores">
-  <div class="w">
-    <div class="caja">
-      <div>
-        <span class="eti">Tiendas y clínicas</span>
-        <h2>¿Quieres vender <em>PawWall</em>?</h2>
-        <p class="lead">Para tiendas de piensos prémium, comederos de diseño, accesorios de decoración y clínicas veterinarias.</p>
-      </div>
-      <div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4 10-10"/></svg><span><b>Alto valor percibido</b> y muy visual: el cliente entiende la necesidad al instante.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4 10-10"/></svg><span><b>Buen margen</b> sobre el precio de venta recomendado.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4 10-10"/></svg><span><b>Starter Kit</b>: expositor con muestras de acabados, 5 paneles y material promocional.</span></li>
-        </ul>
-        <a class="btn osc" style="margin-top:26px" href="mailto:b2b@pawwall.es?subject=Quiero%20el%20dossier%20de%20distribuci%C3%B3n%20PawWall">Solicitar dossier y muestra</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="preguntas">
-  <div class="w">
-    <div style="text-align:center"><span class="eti">Preguntas frecuentes</span><h2>Lo que <em>nos preguntan</em></h2></div>
-    <div class="faq">
-      <details><summary>¿De qué material está hecho?</summary><p>De metacrilato de alta densidad de 3 mm: un material brillante, muy resistente y con una superficie 100 % lisa que se limpia en una pasada.</p></details>
-      <details><summary>¿Hace falta taladrar la pared?</summary><p>No. Se fija con adhesivos 3M en forma de huella, sin obras ni taladros. Se coloca a ras de suelo, sobre el zócalo, en un minuto.</p></details>
-      <details><summary>¿Qué medida necesito?</summary><p>La talla M (50 × 35 cm) va bien para un comedero sencillo. La talla L (70 × 50 cm) cubre comederos dobles, varias mascotas o perros grandes que salpican más.</p></details>
-      <details><summary>¿Qué diferencia hay entre Transparente y Smoked Glass?</summary><p>El Transparente Básico es casi invisible y deja ver tu pared. El Smoked Glass es un ahumado (antracita o bronce) que aporta un toque de diseño contemporáneo.</p></details>
-      <details><summary>¿Cómo funciona el grabado del nombre?</summary><p>Al configurar tu panel escribes el nombre en la casilla «Añade el nombre de tu mascota» y lo grabamos con láser. Cuesta +10 € en Transparente Básico y +15 € en Smoked Glass.</p></details>
-      <details><summary>¿Sirve para gatos?</summary><p>Sí. La colección CatWall está pensada para las zonas de agua y comedero de los gatos, con la misma estética.</p></details>
-    </div>
+    <div class="paneles-cta" style="margin-top:0;background:var(--hueso2);color:var(--tx)"><div><span class="eti">Cómo funciona</span><h3>Se coloca en un minuto, sin obras</h3><p style="color:var(--mu)">Adhesivos 3M en forma de huella, a ras de suelo sobre el zócalo.</p></div><a class="btn osc" href="como-funciona.html">Ver la instalación</a></div>
   </div>
 </section>
 </main>
-
 <footer class="pie-web">
   <div class="w">
     <div class="grid">
-      <div><img src="img/logo-crema.webp" alt="PawWall" width="420" height="330" loading="lazy"><p>Paneles antisalpicaduras de diseño para mascotas. Ahora, el diseño cuida de tu mascota y protege tu hogar.</p></div>
-      <div><b>Tienda</b><a href="#coleccion">DogWall</a><a href="#coleccion" data-ir-col="CatWall">CatWall</a><a href="#personaliza">Personalización</a><a href="#precios">Precios</a></div>
-      <div><b>PawWall</b><a href="#nosotros">Sobre nosotros</a><a href="#instalacion">Cómo funciona</a><a href="#distribuidores">Distribuidores</a><a href="mailto:b2b@pawwall.es">b2b@pawwall.es</a></div>
+      <div><img src="img/logo-crema.webp" alt="PawWall" width="420" height="331" loading="lazy"><p>Paneles antisalpicaduras de diseño para mascotas. Dos líneas: DogWall para perros y CatWall para gatos.</p></div>
+      <div><b>Tienda</b><a href="dogwall.html">DogWall</a><a href="catwall.html">CatWall</a><a href="configurador.html">Configura tu PawWall</a><a href="personalizacion.html">Personalización</a></div>
+      <div><b>PawWall</b><a href="nosotros.html">Sobre nosotros</a><a href="como-funciona.html">Cómo funciona</a><a href="preguntas.html">Preguntas frecuentes</a><a href="distribuidores.html">Distribuidores</a><a href="mailto:b2b@pawwall.es">b2b@pawwall.es</a></div>
     </div>
-    <!-- DEMO: añadir aviso legal, privacidad, cookies y condiciones de venta (devoluciones y envíos) con los datos fiscales del cliente antes de publicar -->
+    <!-- DEMO: añadir aviso legal, privacidad, cookies y condiciones de venta (envíos y devoluciones) con los datos fiscales del cliente antes de publicar -->
     <div class="fin"><span>© <span id="anio">2026</span> PawWall · pawwall.es</span><span>Fabricación nacional · Pago seguro</span></div>
   </div>
 </footer>
-
 <div class="velo" id="velo"></div>
 <aside class="carro" id="carro" aria-label="Carrito" aria-hidden="true">
   <div class="cc"><h2>Tu carrito</h2><button class="x" id="cerrar-carro" aria-label="Cerrar carrito">×</button></div>
@@ -518,90 +115,6 @@ dialog p{color:var(--mu);margin-bottom:12px}
 </aside>
 <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
 <dialog id="dlg-demo"><div class="in"><h2>Esto es una demo</h2><p>En la web definitiva aquí se pasa al pago seguro con tarjeta y los pedidos llegan a tu panel, con el nombre a grabar en cada panel.</p><p>Todavía no se cobra nada.</p><button class="btn osc" id="dlg-ok" style="width:100%">Entendido</button></div></dialog>
-
-<script>
-(function(){
-var GAMAS={
-  tr:{n:"Transparente Básico",gama:"Transparente Básico",col:"linear-gradient(135deg,#fff,#e9eef0)",img:"transparente",pared:"transparente-pared",perros:"transparente-perros",M:39.95,L:49.95,grab:10,claro:true,d:"Casi invisible: protege sin cambiar tu pared."},
-  an:{n:"Smoked Glass Antracita",gama:"Smoked Glass",col:"linear-gradient(135deg,#6e6c6a,#3e3d3c)",img:"antracita",pared:"antracita-pared",perros:"antracita",M:49.95,L:64.95,grab:15,d:"Ahumado gris, elegante y contemporáneo."},
-  br:{n:"Smoked Glass Bronce",gama:"Smoked Glass",col:"linear-gradient(135deg,#c08a5a,#8e5f38)",img:"bronce",pared:"bronce-pared",perros:"bronce-perros",M:49.95,L:64.95,grab:15,d:"Ahumado cálido que combina con la madera."}
-};
-var TALLAS={M:"50 × 35 cm",L:"70 × 50 cm"};
-var TXT={DogWall:"Para la zona de comida de tu perro: protege zócalo y pared de las salpicaduras más intensas.",CatWall:"Para el agua y el comedero de tu gato, con la misma delicadeza estética."};
-var eur=function(n){return n.toLocaleString("es-ES",{minimumFractionDigits:2,maximumFractionDigits:2})+" €"};
-var $=function(s){return document.querySelector(s)};
-var esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
-var S={col:"DogWall",g:"an",t:"M",nombre:"",q:1};
-
-/* cabecera */
-var cab=$("#cab"),menu=$("#menu"),hamb=$("#hamb");
-function scr(){cab.classList.toggle("sol",scrollY>40)}addEventListener("scroll",scr,{passive:true});scr();
-hamb.onclick=function(){var on=menu.classList.toggle("on");cab.classList.toggle("abierto",on);hamb.setAttribute("aria-expanded",on)};
-menu.addEventListener("click",function(e){if(e.target.tagName=="A"){menu.classList.remove("on");cab.classList.remove("abierto");hamb.setAttribute("aria-expanded",false)}});
-
-/* colección */
-function pintarProds(){
-  $("#col-nom").textContent=S.col;$("#col-txt").textContent=TXT[S.col];
-  document.querySelectorAll(".tabs button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.col==S.col)});
-  $("#prods").innerHTML=Object.keys(GAMAS).map(function(k){var g=GAMAS[k];return '<article class="prod rev vis-on"><div class="ph"><img src="img/'+g.perros+'.webp" alt="Panel '+esc(S.col+" "+g.n)+'" width="1000" height="747" loading="lazy"></div><div class="in"><span class="gama">'+esc(g.gama)+'</span><h3>'+esc(S.col+" "+g.n.replace("Smoked Glass ",""))+'</h3><p>'+esc(g.d)+' Talla M o L.</p><div class="punt"><i style="background:'+g.col+'"></i></div><div class="pie"><div class="pr"><small>desde </small>'+eur(g.M)+'</div><a class="btn osc" href="#configura" data-g="'+k+'">Configurar</a></div></div></article>'}).join("");
-}
-document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){S.col=b.dataset.col;pintarProds();sync()}});
-$("#prods").addEventListener("click",function(e){var a=e.target.closest("[data-g]");if(a){S.g=a.dataset.g;sync()}});
-document.querySelectorAll("[data-ir-col]").forEach(function(a){a.addEventListener("click",function(){S.col=a.dataset.irCol;pintarProds();sync()})});
-
-/* configurador */
-$("#c-acab").innerHTML=Object.keys(GAMAS).map(function(k){var g=GAMAS[k];return '<label class="chip"><input type="radio" name="g" value="'+k+'"><span><i style="background:'+g.col+'"></i>'+esc(g.n)+'</span></label>'}).join("");
-$("#c-talla").innerHTML=Object.keys(TALLAS).map(function(t){return '<label class="chip"><input type="radio" name="t" value="'+t+'"><span>Talla '+t+' <small>'+TALLAS[t]+'</small></span></label>'}).join("");
-var form=$("#c-form");
-function precio(){var g=GAMAS[S.g];return g[S.t]+(S.nombre?g.grab:0)}
-function sync(){
-  form.col.value=S.col;form.g.value=S.g;form.t.value=S.t;
-  var g=GAMAS[S.g],img=$("#c-img"),src="img/"+g.pared+".webp";
-  if(img.getAttribute("src")!=src){img.style.opacity=.2;img.onload=function(){img.style.opacity=1};img.src=src}
-  img.alt="Panel "+S.col+" "+g.n+" colocado en la pared";
-  var gr=$("#c-grab");gr.textContent=S.nombre;gr.classList.toggle("claro",!!g.claro);
-  document.querySelectorAll("#c-talla small").forEach(function(s,i){var t=Object.keys(TALLAS)[i];s.textContent=TALLAS[t]+" · "+eur(g[t])});
-  $("#c-acab-n").textContent="· "+g.gama;
-  $("#c-ayuda").textContent="Grabado láser: +"+g.grab+" € en "+g.gama+". Hasta 14 caracteres.";
-  $("#c-cant").textContent=S.q;
-  $("#c-total").textContent=eur(precio()*S.q);
-  $("#c-desg").innerHTML=esc(S.col)+" · Talla "+S.t+"<br>"+eur(g[S.t])+(S.nombre?" + grabado "+eur(g.grab):"")+(S.q>1?" × "+S.q:"");
-}
-form.addEventListener("change",function(e){if(e.target.name=="col"){S.col=e.target.value;pintarProds()}if(e.target.name=="g")S.g=e.target.value;if(e.target.name=="t")S.t=e.target.value;sync()});
-$("#c-nombre").addEventListener("input",function(e){S.nombre=e.target.value.replace(/\s+/g," ").trimStart();sync()});
-$("#c-menos").onclick=function(){if(S.q>1){S.q--;sync()}};
-$("#c-mas").onclick=function(){if(S.q<10){S.q++;sync()}};
-
-/* carrito (guardado en este navegador) */
-var C=[];try{C=JSON.parse(localStorage.getItem("pw-carro")||"[]")}catch(e){}
-function guardar(){try{localStorage.setItem("pw-carro",JSON.stringify(C))}catch(e){}}
-function pintarCarro(){
-  var n=C.reduce(function(a,x){return a+x.q},0),t=C.reduce(function(a,x){return a+x.p*x.q},0);
-  $("#n-carro").textContent=n;$("#t-carro").textContent=eur(t);
-  $("#lista").innerHTML=C.length?C.map(function(x,i){var g=GAMAS[x.g];return '<div class="linea"><img src="img/'+g.pared+'.webp" alt=""><div><b>'+esc(x.col+" "+g.n)+'</b><small>Talla '+x.t+' · '+TALLAS[x.t]+(x.nombre?'<br>Nombre grabado: «'+esc(x.nombre)+'»':'')+'</small><div class="qt"><button data-i="'+i+'" data-d="-1" aria-label="Quitar uno">−</button>'+x.q+'<button data-i="'+i+'" data-d="1" aria-label="Añadir uno">+</button><button class="q" data-i="'+i+'" data-d="x">Eliminar</button></div></div><div class="pr">'+eur(x.p*x.q)+'</div></div>'}).join(""):'<p class="vacio">Tu carrito está vacío.</p>';
-  $("#pagar").disabled=!C.length;$("#pagar").style.opacity=C.length?1:.5;
-}
-$("#lista").addEventListener("click",function(e){var b=e.target.closest("button[data-i]");if(!b)return;var i=+b.dataset.i;if(b.dataset.d=="x")C.splice(i,1);else{C[i].q+=+b.dataset.d;if(C[i].q<1)C.splice(i,1)}guardar();pintarCarro()});
-var velo=$("#velo"),carro=$("#carro"),ultimo;
-function abrir(){ultimo=document.activeElement;velo.classList.add("on");carro.classList.add("on");carro.setAttribute("aria-hidden","false");$("#cerrar-carro").focus()}
-function cerrar(){velo.classList.remove("on");carro.classList.remove("on");carro.setAttribute("aria-hidden","true");if(ultimo)ultimo.focus()}
-$("#abrir-carro").onclick=abrir;$("#cerrar-carro").onclick=cerrar;velo.onclick=cerrar;
-addEventListener("keydown",function(e){if(e.key=="Escape"&&carro.classList.contains("on"))cerrar()});
-var tAv;function aviso(t){var a=$("#aviso");a.textContent=t;a.classList.add("on");clearTimeout(tAv);tAv=setTimeout(function(){a.classList.remove("on")},2600)}
-$("#c-add").onclick=function(){
-  var nom=S.nombre.trim(),it={col:S.col,g:S.g,t:S.t,nombre:nom,p:precio()};
-  var ya=C.find(function(x){return x.col==it.col&&x.g==it.g&&x.t==it.t&&x.nombre==it.nombre});
-  if(ya)ya.q+=S.q;else{it.q=S.q;C.push(it)}
-  guardar();pintarCarro();aviso("Añadido al carrito: "+S.col+" "+GAMAS[S.g].n+" · Talla "+S.t);
-};
-var dlg=$("#dlg-demo");$("#pagar").onclick=function(){if(dlg.showModal)dlg.showModal();else alert("Esto es una demo: todavía no se cobra nada.")};
-$("#dlg-ok").onclick=function(){dlg.close()};
-
-/* animación al aparecer */
-if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vis-on");io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll(".rev").forEach(function(el){io.observe(el)})}else document.querySelectorAll(".rev").forEach(function(el){el.classList.add("vis-on")});
-$("#anio").textContent=new Date().getFullYear();
-pintarProds();sync();pintarCarro();
-})();
-</script>
+<script src="app.js"></script>
 </body>
 </html>
