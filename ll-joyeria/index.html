@@ -55,7 +55,7 @@
 }
 </script>
 <link rel="icon" type="image/png" href="img/logo.png">
-<link rel="preload" as="image" href="img/portada-1.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/portada-1.webp" fetchpriority="high" media="(min-width:641px)"><link rel="preload" as="image" href="img/portada-1-movil.webp" fetchpriority="high" media="(max-width:640px)">
 <link rel="preload" href="fuentes/jost-latin-b58a58.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="style" href="fuentes/fuentes.css">
 <link href="fuentes/fuentes.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -114,7 +114,7 @@ body.abierto .hamb i:nth-child(1){top:21.5px;transform:rotate(45deg)}body.abiert
 /* ===== Fotos (ilustración + foto real encima si existe) ===== */
 .foto{position:relative;overflow:hidden;background:var(--marfil)}
 .foto>svg{position:absolute;inset:0;width:100%;height:100%}
-.foto>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.6,.2,1)}
+.foto>picture{position:absolute;inset:0}.foto>img,.foto>picture>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.6,.2,1)}
 a:hover .foto>img,a:hover .foto>svg{transform:scale(1.04)}
 .foto>svg{transition:transform 1.4s cubic-bezier(.2,.6,.2,1)}
 
@@ -125,7 +125,7 @@ a:hover .foto>img,a:hover .foto>svg{transform:scale(1.04)}
 .slide .foto{position:absolute;inset:0}
 .velo{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,12,10,.62) 0%,rgba(10,12,10,.32) 38%,rgba(10,12,10,0) 62%);pointer-events:none}
 .velo.claro{background:linear-gradient(90deg,rgba(255,255,255,.82) 0%,rgba(255,255,255,.5) 34%,rgba(255,255,255,0) 58%)}
-.slide.on .foto>svg,.slide.on .foto>img{animation:zoom 9s ease-out forwards}
+.slide.on .foto>svg,.slide.on .foto>img,.slide.on .foto>picture>img{animation:zoom 9s ease-out forwards}
 @keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
 .slide .txt{position:absolute;top:50%;left:max(40px,calc((100vw - 1320px)/2 + 40px));transform:translateY(-50%);max-width:520px;color:#fff}
 .slide.osc .txt{color:var(--tinta)}
@@ -398,7 +398,7 @@ footer{background:#fff;border-top:1px solid var(--linea)}
   <div class="portada" id="portada">
     <!-- Diapositiva 1 -->
     <div class="slide on" data-tono="claro">
-      <div class="foto"><img src="img/portada-1.webp" width="1441" height="901" fetchpriority="high" alt="Modelo con collar y pendientes de Joyería Los Lobatos" style="object-position:60% 35%"></div>
+      <div class="foto"><picture><source media="(max-width:640px)" srcset="img/portada-1-movil.webp"><img src="img/portada-1.webp" width="1441" height="951" fetchpriority="high" alt="Modelo con collar y pendientes de Joyería Los Lobatos" style="object-position:50% 22%"></picture></div>
       <div class="velo"></div>
       <div class="txt">
         <span class="mayus">Alta joyería</span>
@@ -409,7 +409,7 @@ footer{background:#fff;border-top:1px solid var(--linea)}
     </div>
     <!-- Diapositiva 2 -->
     <div class="slide" data-tono="claro">
-      <div class="foto"><img src="img/portada-2.webp" width="1800" height="1125" decoding="async" alt="Manos con anillo de compromiso y alianza" style="object-position:50% 45%"></div>
+      <div class="foto"><picture><source media="(max-width:640px)" srcset="img/portada-2-movil.webp"><img src="img/portada-2.webp" width="2560" height="1306" decoding="async" alt="Manos con anillo de compromiso y alianza" style="object-position:50% 50%"></picture></div>
       <div class="velo"></div>
       <div class="txt">
         <span class="mayus">Anillos y alianzas</span>
@@ -420,7 +420,7 @@ footer{background:#fff;border-top:1px solid var(--linea)}
     </div>
     <!-- Diapositiva 3 -->
     <div class="slide" data-tono="claro">
-      <div class="foto"><img src="img/portada-3.webp" width="1800" height="1125" decoding="async" alt="Pendiente con perla y anillo" style="object-position:55% 45%"></div>
+      <div class="foto"><picture><source media="(max-width:640px)" srcset="img/portada-3-movil.webp"><img src="img/portada-3.webp" width="2560" height="1690" decoding="async" alt="Pendiente con perla y anillo" style="object-position:50% 40%"></picture></div>
       <div class="velo"></div>
       <div class="txt">
         <span class="mayus">Perlas</span>
@@ -431,7 +431,7 @@ footer{background:#fff;border-top:1px solid var(--linea)}
     </div>
     <!-- Diapositiva 4 -->
     <div class="slide" data-tono="claro">
-      <div class="foto"><img src="img/portada-4.webp" width="1800" height="1125" decoding="async" alt="Collar de piedras de colores sobre vestido verde" style="object-position:55% 50%"></div>
+      <div class="foto"><picture><source media="(max-width:640px)" srcset="img/portada-4-movil.webp"><img src="img/portada-4.webp" width="2560" height="1382" decoding="async" alt="Collar de piedras de colores sobre vestido verde" style="object-position:50% 45%"></picture></div>
       <div class="velo"></div>
       <div class="txt">
         <span class="mayus">Color</span>
@@ -463,15 +463,15 @@ footer{background:#fff;border-top:1px solid var(--linea)}
       <a class="btn" href="#contacto">Solicitar cita</a>
     </div>
     <a class="item ap" href="#piezas">
-      <div class="foto"><img src="img/anillos.webp" width="900" height="1200" decoding="async" alt="Manos con anillo de compromiso y alianza" loading="lazy"></div>
+      <div class="foto"><img src="img/anillos.webp" width="1500" height="2000" decoding="async" alt="Manos con anillo de compromiso y alianza" loading="lazy"></div>
       <b>Anillos y alianzas</b><small>Descubrir</small>
     </a>
     <a class="item ap" href="#contacto">
-      <div class="foto"><img src="img/colgantes.webp" width="900" height="1200" decoding="async" alt="Modelo con colgante y pendientes" loading="lazy"></div>
+      <div class="foto"><img src="img/colgantes.webp" width="1441" height="1921" decoding="async" alt="Modelo con colgante y pendientes" loading="lazy"></div>
       <b>Colgantes y collares</b><small>Descubrir</small>
     </a>
     <a class="item ap" href="#contacto">
-      <div class="foto"><img src="img/pendientes.webp" width="900" height="1200" decoding="async" alt="Pendiente largo con circonita en forma de gota" loading="lazy"></div>
+      <div class="foto"><img src="img/pendientes.webp" width="1500" height="2000" decoding="async" alt="Pendiente largo con circonita en forma de gota" loading="lazy"></div>
       <b>Pendientes</b><small>Descubrir</small>
     </a>
   </div>
@@ -481,9 +481,9 @@ footer{background:#fff;border-top:1px solid var(--linea)}
   <div class="piezas w" id="piezas">
     <div class="pz-cab ap"><span class="mayus" style="color:var(--gris)">Algunas de nuestras piezas</span><h2>Alianzas y <em>anillos de pedida</em></h2></div>
     <h3 class="pz-t ap">Alianzas</h3>
-    <div class="pz-g"><figure class="pz ap"><img src="img/alianza-1.webp" width="800" height="800" loading="lazy" decoding="async" alt="Alianzas de oro amarillo con línea ondulada"></figure><figure class="pz ap"><img src="img/alianza-2.webp" width="800" height="800" loading="lazy" decoding="async" alt="Alianzas de oro amarillo con hendiduras"></figure><figure class="pz ap"><img src="img/alianza-3.webp" width="800" height="800" loading="lazy" decoding="async" alt="Alianzas de oro blanco, una con diamantes"></figure><figure class="pz ap"><img src="img/alianza-4.webp" width="800" height="800" loading="lazy" decoding="async" alt="Alianzas de textura martelé en oro blanco y rosa con piedra"></figure></div>
+    <div class="pz-g"><figure class="pz ap"><img src="img/alianza-1.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Alianzas de oro amarillo con línea ondulada"></figure><figure class="pz ap"><img src="img/alianza-2.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Alianzas de oro amarillo con hendiduras"></figure><figure class="pz ap"><img src="img/alianza-3.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Alianzas de oro blanco, una con diamantes"></figure><figure class="pz ap"><img src="img/alianza-4.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Alianzas de textura martelé en oro blanco y rosa con piedra"></figure></div>
     <h3 class="pz-t ap">Anillos de pedida</h3>
-    <div class="pz-g"><figure class="pz ap"><img src="img/pedida-1.webp" width="800" height="800" loading="lazy" decoding="async" alt="Solitario con piedra de talla princesa"></figure><figure class="pz ap"><img src="img/pedida-2.webp" width="800" height="800" loading="lazy" decoding="async" alt="Anillo con piedra central y circonitas en el aro"></figure><figure class="pz ap"><img src="img/pedida-3.webp" width="800" height="800" loading="lazy" decoding="async" alt="Solitario con brillante en garras"></figure><figure class="pz ap"><img src="img/pedida-4.webp" width="800" height="800" loading="lazy" decoding="async" alt="Anillo con brillante central y piedras en el aro"></figure><figure class="pz ap"><img src="img/pedida-5.webp" width="800" height="800" loading="lazy" decoding="async" alt="Solitario con brillante y pavé en el aro"></figure></div>
+    <div class="pz-g"><figure class="pz ap"><img src="img/pedida-1.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Solitario con piedra de talla princesa"></figure><figure class="pz ap"><img src="img/pedida-2.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Anillo con piedra central y circonitas en el aro"></figure><figure class="pz ap"><img src="img/pedida-3.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Solitario con brillante en garras"></figure><figure class="pz ap"><img src="img/pedida-4.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Anillo con brillante central y piedras en el aro"></figure><figure class="pz ap"><img src="img/pedida-5.webp" width="1080" height="1080" loading="lazy" decoding="async" alt="Solitario con brillante y pavé en el aro"></figure></div>
     <p class="pz-pie ap">¿Le gusta alguna? <a class="enlace" href="#contacto">Pida cita</a> y la vemos juntos en el taller, a su medida.</p>
   </div>
 
