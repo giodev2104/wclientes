@@ -289,3 +289,94 @@ dialog p{color:var(--mu);margin-bottom:12px}
 
 .pf{display:grid;gap:6px;margin-bottom:12px;font-size:13.5px;color:var(--mu)}.pf input,.pf select,.pf textarea{font:inherit;font-size:15px;color:var(--tx);padding:11px 12px;border:1px solid var(--bd);border-radius:2px;background:#fff;width:100%}.pf input:focus,.pf select:focus,.pf textarea:focus{outline:none;border-color:var(--osc)}.p-err{color:#b42318;font-size:14px;min-height:1em;margin:6px 0}dialog#dlg-pedido{width:min(520px,calc(100% - 24px));max-height:calc(100vh - 24px);overflow:auto}#p-ok h2{font-size:28px;margin-bottom:12px}#p-ok p{color:var(--mu);margin-bottom:12px}
 .pf[hidden],#p-ok[hidden],form[hidden]{display:none}
+
+/* ===== Móvil (solo pantallas pequeñas; el diseño de ordenador no cambia) ===== */
+.barra-m{display:none}
+@media(max-width:760px){
+ body{font-size:15.5px}
+ .sec{padding:56px 0}
+ h2{font-size:30px;line-height:1.15}
+ .lead{font-size:16px}
+ .cab .w{height:64px}
+ .cab .logo img{height:46px}
+ .cab nav{top:64px}
+ /* portada: foto arriba y texto debajo, sin solaparse */
+ .hero{display:block;min-height:0;padding:0}
+ .hero picture{position:relative;display:block;inset:auto;height:58vh;min-height:330px;max-height:520px}
+ .hero picture img{position:absolute;inset:0;object-position:58% 85%}
+ .hero:after{background:linear-gradient(180deg,rgba(27,26,24,.55) 0%,rgba(27,26,24,0) 22%,rgba(27,26,24,0) 62%,var(--osc) 100%);bottom:auto;height:min(max(58vh,330px),520px)}
+ .hero .marco{display:none}
+ .hero .w{padding-top:6px;padding-bottom:44px}
+ .hero h1{font-size:38px}
+ .hero .sub{margin:18px 0 26px;font-size:16px;padding-top:18px}
+ .hero .cta,.banner .cta{flex-direction:column;gap:10px}
+ .hero .cta .btn,.banner .cta .btn{width:100%;flex:none}
+ .navi{font-size:13px;padding:12px 18px}
+ /* cabeceras de páginas */
+ .banner{padding:112px 0 44px}
+ .banner h1{font-size:34px}
+ .banner p{font-size:16px}
+ .migas{margin-bottom:14px}
+ /* beneficios: lista compacta con icono a la izquierda */
+ .ben{grid-template-columns:1fr;margin-top:32px}
+ .ben div{display:grid;grid-template-columns:40px 1fr;column-gap:14px;padding:20px 18px}
+ .ben svg{grid-row:span 2;margin:2px 0 0;width:30px;height:30px}
+ .ben h3{font-size:17px;margin-bottom:4px}
+ .ben p{font-size:14px}
+ /* líneas DogWall / CatWall */
+ .lineas{gap:16px;margin-top:32px}
+ .linea-c{min-height:400px}
+ .linea-c h3{font-size:34px}
+ .linea-c.der .in{max-width:68%}
+ .paneles-cta{margin-top:32px;flex-direction:column;align-items:stretch;text-align:left}
+ .paneles-cta .btn{width:100%}
+ .paneles-cta h3{font-size:25px}
+ /* tarjetas de producto */
+ .prods{gap:18px;margin-top:32px}
+ .prod .in{padding:18px 18px 20px}
+ .prod .pie{margin-top:16px}
+ .pers .grid,.nos .grid{gap:28px}
+ .pers ul{margin:22px 0 26px}
+ /* configurador */
+ .conf{gap:26px;margin-top:28px}
+ .op{padding:18px 0}
+ .chips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+ .chip span{padding:12px 12px;font-size:14px;height:100%}
+ #c-talla .chip span{flex-direction:column;align-items:flex-start;gap:2px}
+ .total .pr{font-size:34px}
+ .sellos{gap:8px}
+ .barra-m{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:25;align-items:center;justify-content:space-between;gap:14px;padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(247,244,238,.97);border-top:1px solid var(--bd);box-shadow:0 -6px 20px rgba(0,0,0,.08);transform:translateY(110%);transition:transform .25s}
+ .barra-m.on{transform:none}
+ .barra-m small{display:block;font-size:12px;color:var(--mu)}
+ .barra-m b{font:400 24px Raleway,sans-serif}
+ .barra-m .btn{padding:14px 18px;font-size:13px}
+ /* tabla de precios en tarjetas */
+ .tabla{border:0;background:none;margin-top:28px}
+ .tabla thead{display:none}
+ .tabla,.tabla tbody{display:block}
+ .tabla tr{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 10px;background:#fff;border:1px solid var(--bd);padding:16px;margin-bottom:12px}
+ .tabla td{border:0;padding:0}
+ .tabla td:first-child{grid-column:1/-1;font-weight:600;margin-bottom:10px}
+ .tabla td[data-l]:before{content:attr(data-l);display:block;font:600 10.5px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);margin-bottom:4px}
+ .tabla td.p{font-size:19px}
+ .tabla .g i{display:inline-block}
+ /* instalación y medidas */
+ .pasos{gap:14px;margin-top:32px}
+ .paso{padding:24px 20px}
+ .paso svg{width:36px;height:36px;margin-bottom:14px}
+ .medidas{gap:14px}
+ /* nosotros, distribuidores, preguntas */
+ .subm{gap:10px}
+ .cita{font-size:19px;padding:18px 20px}
+ .b2b .caja{padding:28px 20px}
+ .b2b .btn{width:100%}
+ .faq{margin-top:24px}
+ .faq summary{font-size:16.5px;padding:18px 36px 18px 0}
+ /* pie */
+ .pie-web{padding:48px 0 28px}
+ .pie-web .grid{grid-template-columns:1fr 1fr;gap:28px 20px}
+ .pie-web .grid>div:first-child{grid-column:1/-1}
+ .pie-web .fin{flex-direction:column;gap:6px;margin-top:32px}
+ /* pedido */
+ dialog .in{padding:26px 20px 22px}
+}

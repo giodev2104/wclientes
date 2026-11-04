@@ -129,6 +129,7 @@ if(form){
     $("#c-ayuda").textContent="Grabado láser: +"+eur(GR(S.g))+" en "+g.gama+". Hasta 14 caracteres.";
     $("#c-cant").textContent=S.q;
     $("#c-total").textContent=eur(precio()*S.q);
+    var bt=$("#bm-total");if(bt)bt.textContent=eur(precio()*S.q);
     $("#c-desg").innerHTML=esc(S.col)+" · Talla "+S.t+"<br>"+eur(PR(S.col,S.g,S.t))+(S.nombre?" + grabado "+eur(GR(S.g)):"")+(S.q>1?" × "+S.q:"");
   };
   form.addEventListener("change",function(e){if(e.target.name=="col")S.col=e.target.value;if(e.target.name=="g")S.g=e.target.value;if(e.target.name=="t")S.t=e.target.value;sync()});
@@ -142,6 +143,9 @@ if(form){
     guardar();pintarCarro();aviso("Añadido al carrito: "+S.col+" "+GAMAS[S.g].n+" · Talla "+S.t);
   };
   sync();alCargar.push(sync);
+  /* móvil: barra fija con el total mientras el botón principal no está a la vista */
+  var bm=$("#barra-m");if(bm){$("#bm-add").onclick=function(){$("#c-add").click()};
+    if("IntersectionObserver" in window){new IntersectionObserver(function(es){bm.classList.toggle("on",!es[0].isIntersecting&&es[0].boundingClientRect.top>0)}).observe($("#c-add"))}}
 }
 
 /* animación al aparecer */
